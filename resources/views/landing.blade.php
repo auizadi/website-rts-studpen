@@ -8,7 +8,6 @@
     <title>PT RAJA TEKNIK SOLUSI</title>
     <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    {{-- @vite('resources/css/app.css') --}}
 
     <style>
         .text-gradient {
@@ -51,7 +50,7 @@
                     class="text-gradient self-center text-3xl tracking-wide  font-bold whitespace-nowrap dark:text-white">RTL</span>
             </a>
             <button data-collapse-toggle="navbar-default" type="button"
-                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-400 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                 aria-controls="navbar-default" aria-expanded="false">
                 <span class="sr-only">Open main menu</span>
                 <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -71,7 +70,7 @@
                     <li>
                         <a href="#about-us"
                             class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About
-                            Us</a>
+                            us</a>
                     </li>
                     <li>
                         <a href="#portfolio"
@@ -149,19 +148,19 @@
     </nav>
 
     {{-- home --}}
-    <section id="home" class="min-h-screen pt-20 px-5 md:px-10 flex items-center justify-center">
+    <section id="home" class="min-h-screen px-5 md:px-10 flex items-center -mt-20 md:-mt-7">
         <div
-            class="mx-auto bg-gray-200 dark:bg-gray-800 dark:shadow-md dark:shadow-black dark:border dark:border-gray-700 rounded-lg p-8 md:p-12 text-center">
-            <h2 class="dark:dark-text font-extrabold text-3xl md:text-6xl mb-6">Solusi Inovatif di Bidang <span
+            class="mx-auto bg-black/10 dark:bg-gray-800 dark:shadow-md dark:shadow-black dark:border dark:border-gray-700 rounded-lg p-8 md:p-12 text-center">
+            <h2 class="dark:text-gray-200 font-extrabold text-3xl md:text-6xl mb-6">Solusi Inovatif di Bidang <span
                     class="text-gradient">Teknik
                     & Teknologi</span></h2>
-            <p class="dark:dark-text my-5 text-gray-700 text-lg md:text-xl">RTS menyediakan layanan rekayasa,
+            <p class="dark:text-gray-400 my-8 text-gray-700 text-lg md:text-xl">RTS menyediakan layanan rekayasa,
                 pengembangan perangkat
                 lunak, dan R&D
                 terdepan untuk
                 mendorong kesuksesan industri dan teknologi Anda.</p>
             <a href="#services"
-                class="inline-block text-white font-bold px-8 py-3 rounded-full bg-gradient-to-r from-[#ff4800] via-[#e0007c] to-[#3b82f6] hover:bg-blue-600 transition duration-300">Jelajahi
+                class="inline-block text-white font-bold px-8 py-3 rounded-full gradient transition duration-300">Jelajahi
                 Layanan
                 Kami</a>
 
@@ -173,9 +172,9 @@
     <section id="about-us" class="min-h-screen py-20 px-5 md:px-10 flex items-center">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16">
-                <h2 class="dark:dark-text text-3xl font-bold mb-5">Tentang <span class="text-gradient">Raja
+                <h2 class="dark:text-gray-200 text-3xl font-bold mb-5">Tentang <span class="text-gradient">Raja
                         Teknik Solusi</span> </h2>
-                <p class="dark:dark-text max-w-2xl mx-auto text-gray-600">Kami adalah mitra terpercaya Anda dalam
+                <p class="dark:text-gray-400 max-w-2xl mx-auto text-gray-600">Kami adalah mitra terpercaya Anda dalam
                     memecahkan tantangan
                     teknis dan digital yang kompleks dengan
                     presisi dan inovasi.</p>
@@ -186,8 +185,8 @@
                 </div>
                 <div class="w-full lg:w-1/2 space-y-8 h-full text-center md:text-justify">
                     <div>
-                        <h3 class="dark:dark-text text-2xl font-bold mb-4">Misi Kami</h3>
-                        <p class="dark:dark-text text-gray-600 ">Memberikan solusi teknis dan digital superior yang
+                        <h3 class="dark:text-gray-200 text-2xl font-bold mb-4">Misi Kami</h3>
+                        <p class="dark:text-gray-400 text-gray-600 ">Memberikan solusi teknis dan digital superior yang
                             meningkatkan
                             efisiensi,
                             keamanan, dan produktivitas bagi klien kami. Kami berkomitmen pada keunggulan, merintis
@@ -195,8 +194,8 @@
                             dan membangun kemitraan jangka panjang berdasarkan kepercayaan dan hasil.</p>
                     </div>
                     <div>
-                        <h3 class="dark:dark-text text-2xl font-bold mb-4">Visi Kami</h3>
-                        <p class= "dark:dark-text text-gray-600 ">Menjadi penyedia layanan rekayasa dan teknologi
+                        <h3 class="dark:text-gray-200 text-2xl font-bold mb-4">Visi Kami</h3>
+                        <p class= "dark:text-gray-400 text-gray-600 ">Menjadi penyedia layanan rekayasa dan teknologi
                             terkemuka,
                             yang diakui
                             atas
@@ -207,102 +206,107 @@
 
                 </div>
             </div>
-            <div class="text-center my-16">
-                <h2 class="dark:dark-text text-3xl font-bold mb-5">Keahlian <span class="text-gradient">Kami</span>
-                </h2>
-                <p class="dark:dark-text max-w-2xl mx-auto text-gray-600">Kami menawarkan berbagai layanan khusus untuk
-                    memenuhi
-                    beragam kebutuhan industri modern.</p>
-            </div>
-            <div
-                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center items-center justify-center mx-auto">
-                <div class="card">
-                    <a href="#"
-                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-lg hover:bg-gray-100 text-center dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                        <i class="fa-solid fa-brain text-5xl mb-5 text-gradient"></i>
 
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">AI & DATA
-                            SCIENCE</h5>
-                        <p class="font-normal text-gray-600 dark:text-gray-400">Pengembangan solusi cerdas menggunakan
-                            AI, machine learning, dan analisis data untuk wawasan yang dapat ditindaklanjuti.</p>
-                    </a>
-                </div>
-                <div class="card">
-                    <a href="#"
-                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-lg hover:bg-gray-100 text-center dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                        <i class="fa-solid fa-robot text-5xl mb-5 text-gradient"></i>
-
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Industrial
-                            Automation
-                        </h5>
-                        <p class="font-normal text-gray-600 dark:text-gray-400">Implementasi sistem PLC, HMI, dan
-                            robotik untuk merampingkan operasi dan meningkatkan produktivitas.</p>
-                    </a>
-                </div>
-                <div class="card">
-                    <a href="#"
-                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-lg hover:bg-gray-100 text-center dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                        <i class="fa-solid fa-wifi text-5xl mb-5 text-gradient"></i>
-
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Internet of
-                            Things (IoT)
-                        </h5>
-                        <p class="font-normal text-gray-600 dark:text-gray-400">Pengembangan solusi IoT end-to-end,
-                            termasuk perangkat keras, sensor, konektivitas, dan analisis data.</p>
-                    </a>
-                </div>
-                <div class="card">
-                    <a href="#"
-                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-lg hover:bg-gray-100 text-center dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                        <i class="fa-solid fa-code text-5xl mb-5 text-gradient"></i>
-
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Software
-                            Development
-                        </h5>
-                        <p class="font-normal text-gray-600 dark:text-gray-400">Pengembangan perangkat lunak, aplikasi
-                            web, dan mobile kustom untuk kebutuhan bisnis digital Anda.</p>
-                    </a>
-                </div>
-                <div class="card">
-                    <a href="#"
-                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-lg hover:bg-gray-100 text-center dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                        <i class="fa-solid fa-vr-cardboard text-5xl mb-5 text-gradient"></i>
-
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Mixed Reality
-                            (AR/VR)
-                        </h5>
-                        <p class="font-normal text-gray-600 dark:text-gray-400">Membangun pengalaman imersif untuk
-                            simulasi, pelatihan, dan visualisasi data.</p>
-                    </a>
-                </div>
-                <div class="card">
-                    <a href="#"
-                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-lg hover:bg-gray-100 text-center dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                        <i class="fa-solid fa-flask text-5xl text-gradient mb-5 text-gradient"></i>
-
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Research &
-                            Development
-                        </h5>
-                        <p class="font-normal text-gray-600 dark:text-gray-400">Fokus pada riset dan pengembangan untuk
-                            menciptakan inovasi dan solusi teknologi masa depan.
-
-                        </p>
-                    </a>
-
-
-                </div>
-
-            </div>
         </div>
     </section>
+    {{-- services --}}
+    <section id="services" class="min-h-screen py-20 px-5 md:px-10 ">
+        <div class="text-center my-16">
+            <h2 class="dark:text-gray-200 text-3xl font-bold mb-5">Keahlian <span class="text-gradient">Kami</span>
+            </h2>
+            <p class="dark:text-gray-400 max-w-2xl mx-auto text-gray-600">Kami menawarkan berbagai layanan khusus
+                untuk
+                memenuhi
+                beragam kebutuhan industri modern.</p>
+        </div>
+        <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center items-center justify-center mx-auto">
+            <div class="card h-full">
+                <a href="#"
+                    class="block h-full max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-lg hover:bg-gray-100 text-center dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                    <i class="fa-solid fa-brain text-5xl mb-5 text-gradient"></i>
 
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">AI & DATA
+                        SCIENCE</h5>
+                    <p class="font-normal text-gray-600 dark:text-gray-400">Pengembangan solusi cerdas menggunakan
+                        AI, machine learning, dan analisis data untuk wawasan yang dapat ditindaklanjuti.</p>
+                </a>
+            </div>
+            <div class="card h-full">
+                <a href="#"
+                    class="block h-full max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-lg hover:bg-gray-100 text-center dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                    <i class="fa-solid fa-robot text-5xl mb-5 text-gradient"></i>
+
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Industrial
+                        Automation
+                    </h5>
+                    <p class="font-normal text-gray-600 dark:text-gray-400">Implementasi sistem PLC, HMI, dan
+                        robotik untuk merampingkan operasi dan meningkatkan produktivitas.</p>
+                </a>
+            </div>
+            <div class="card h-full">
+                <a href="#"
+                    class="block h-full max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-lg hover:bg-gray-100 text-center dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                    <i class="fa-solid fa-wifi text-5xl mb-5 text-gradient"></i>
+
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Internet of
+                        Things (IoT)
+                    </h5>
+                    <p class="font-normal text-gray-600 dark:text-gray-400">Pengembangan solusi IoT end-to-end,
+                        termasuk perangkat keras, sensor, konektivitas, dan analisis data.</p>
+                </a>
+            </div>
+            <div class="card h-full">
+                <a href="#"
+                    class="block h-full max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-lg hover:bg-gray-100 text-center dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                    <i class="fa-solid fa-code text-5xl mb-5 text-gradient"></i>
+
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Software
+                        Development
+                    </h5>
+                    <p class="font-normal text-gray-600 dark:text-gray-400">Pengembangan perangkat lunak, aplikasi
+                        web, dan mobile kustom untuk kebutuhan bisnis digital Anda.</p>
+                </a>
+            </div>
+            <div class="card h-full">
+                <a href="#"
+                    class="block h-full max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-lg hover:bg-gray-100 text-center dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                    <i class="fa-solid fa-vr-cardboard text-5xl mb-5 text-gradient"></i>
+
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Mixed Reality
+                        (AR/VR)
+                    </h5>
+                    <p class="font-normal text-gray-600 dark:text-gray-400">Membangun pengalaman imersif untuk
+                        simulasi, pelatihan, dan visualisasi data.</p>
+                </a>
+            </div>
+            <div class="card h-full">
+                <a href="#"
+                    class="block h-full max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-lg hover:bg-gray-100 text-center dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                    <i class="fa-solid fa-flask text-5xl text-gradient mb-5 text-gradient"></i>
+
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Research &
+                        Development
+                    </h5>
+                    <p class="font-normal text-gray-600 dark:text-gray-400">Fokus pada riset dan pengembangan untuk
+                        menciptakan inovasi dan solusi teknologi masa depan.
+
+                    </p>
+                </a>
+
+
+            </div>
+
+        </div>
+    </section>
     {{-- portfolio --}}
     <section id="portfolio" class="min-h-screen py-20 px-5 md:px-10 flex items-center">
         <div class="max-w-6xl mx-auto">
             <div class="text-center my-16">
-                <h2 class="dark:dark-text text-3xl font-bold mb-5">Our <span class="text-gradient">Portfolio</span>
+                <h2 class="dark:text-gray-200 text-3xl font-bold mb-5">Our <span
+                        class="text-gradient">Portfolio</span>
                 </h2>
-                <p class="dark:dark-text max-w-2xl mx-auto text-gray-600">Explore our diverse range of successful
+                <p class="dark:text-gray-400 max-w-2xl mx-auto text-gray-600">Explore our diverse range of successful
                     projects and
                     solutions.</p>
             </div>
@@ -314,9 +318,11 @@
     <section id="articles" class="min-h-screen py-20 px-5 md:px-10 flex items-center">
         <div class="max-h-6xl mx-auto">
             <div class="text-center my-16">
-                <h2 class="dark:dark-text text-3xl font-bold mb-5">Latest <span class="text-gradient">Articles</span>
+                <h2 class="dark:text-gray-200 text-3xl font-bold mb-5">Latest <span
+                        class="text-gradient">Articles</span>
                 </h2>
-                <p class="dark:dark-text max-w-2xl mx-auto text-gray-600">Stay updated with our insights and expertise
+                <p class="dark:text-gray-400 max-w-2xl mx-auto text-gray-600">Stay updated with our insights and
+                    expertise
                     in engineering
                     and technology.</p>
             </div>
@@ -329,129 +335,159 @@
     <section id="careers" class="min-h-screen py-20 px-5 md:px-10 flex items-center">
         <div class="max-w-6xl mx-auto">
             <div class="text-center my-16">
-                <h2 class="dark:dark-text text-3xl font-bold mb-5">Join Our <span class="text-gradient">Team</span>
+                <h2 class="dark:text-gray-200 text-3xl font-bold mb-5">Join Our <span
+                        class="text-gradient">Team</span>
                 </h2>
-                <p class="dark:dark-text max-w-2xl mx-auto text-gray-600">Temukan peluang karier menarik dan
+                <p class="dark:text-gray-400 max-w-2xl mx-auto text-gray-600">Temukan peluang karier menarik dan
                     berkembanglah bersama
                     Raja Teknik Solusi.</p>
             </div>
             <div
-                class="bg-white dark:bg-gray-800 border dark:border-gray-950 dark:shadow-md dark:shadow-gray-950 rounded-lg shadow-lg p-8 md:p-12">
-                <div class="text-center mb-8">
-                    <h2 class="dark:dark-text text-3xl font-bold mb-5">Program Magang & Studi Independen
+                class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-lg dark:shadow-gray-900/50 p-8 md:p-12">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 dark:text-white">
+                        Program Magang & Studi Independen
                     </h2>
-                    <p class="dark:dark-text max-w-2xl mx-auto text-gray-600">Program magang dan studi independen kami
-                        menawarkan
-                        pengalaman kerja langsung
-                        di bidang teknik dan teknologi dengan mengerjakan proyek real dari industri. Bersiaplah untuk
-                        meningkatkan keterampilan praktis Anda dan meningkatkan daya saing di dunia kerja digital.</p>
+                    <p class=" text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                        Program magang dan studi independen kami menawarkan pengalaman kerja langsung di bidang teknik
+                        dan teknologi dengan mengerjakan proyek real dari industri. Bersiaplah untuk meningkatkan
+                        keterampilan praktis Anda dan meningkatkan daya saing di dunia kerja digital.
+                    </p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center mx-auto">
-                    <div class="card">
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                    <!-- Card 1 -->
+                    <div class="card group h-full">
                         <div
-                            class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-lg hover:bg-gray-100  dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                            class="h-full p-6 bg-white dark:bg-gray-800 border border-indigo-500 dark:border-gray-700 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 hover:border-indigo-300 dark:hover:border-indigo-500 flex flex-col">
                             <i class="fa-solid fa-laptop-code text-5xl mb-5 text-gradient"></i>
-
-                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white ">Magang
-                                dan Studpen Pengembangan Perangkat Lunak</h5>
-                            <p class="font-normal text-gray-600 dark:text-gray-400">Pelajari pengembangan web dan
-                                aplikasi seluler, struktur data, algoritma, dan praktik coding terbaik.</p>
+                            <h3 class="text-xl md:text-2xl font-bold mb-3 text-gray-900 dark:text-white">
+                                Magang dan Studi Independen Pengembangan Perangkat Lunak
+                            </h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-6 flex-grow">
+                                Pelajari pengembangan web dan aplikasi seluler, struktur data, algoritma, dan praktik
+                                coding terbaik.
+                            </p>
                             <a href="{{ route('login') }}"
-                                class="font-bold px-7 py-3 mt-15 inline-flex justify-center items-center text-white rounded-lg gradient">Daftar
-                                Sekarang<i
-                                    class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i></a>
+                                class="w-full inline-flex items-center px-5 py-3 gradient text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 group-hover:translate-x-1">
+                                Daftar Sekarang
+                                <i
+                                    class="fa-solid fa-arrow-right ml-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+                            </a>
                         </div>
-
                     </div>
-                    <div class="card">
+
+                    <!-- Card 2 -->
+                    <div class="card group h-full">
                         <div
-                            class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-lg hover:bg-gray-100  dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                            class="h-full p-6 bg-white dark:bg-gray-800 border border-indigo-500 dark:border-gray-700 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 hover:border-indigo-300 dark:hover:border-indigo-500 flex flex-col">
                             <i class="fa-solid fa-robot text-5xl mb-5 text-gradient"></i>
-
-                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white ">Magang
-                                dan Studpen Otomasi Industri</h5>
-                            <p class="font-normal text-gray-600 dark:text-gray-400">Dapatkan pengalaman dalam
-                                pemrograman PLC, sistem kontrol, robotika, dan integrasi sistem otomasi.</p>
+                            <h3 class="text-xl md:text-2xl font-bold mb-3 text-gray-900 dark:text-white">
+                                Magang dan Studi Independen Otomasi Industri
+                            </h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-6 flex-grow">
+                                Dapatkan pengalaman dalam pemrograman PLC, sistem kontrol, robotika, dan integrasi
+                                sistem otomasi.
+                            </p>
                             <a href="{{ route('login') }}"
-                                class="font-bold px-7 py-3 mt-15 inline-flex justify-center items-center text-white rounded-lg gradient">Daftar
-                                Sekarang<i
-                                    class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i></a>
+                                class="w-full inline-flex items-center px-5 py-3 gradient text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 group-hover:translate-x-1">
+                                Daftar Sekarang
+                                <i
+                                    class="fa-solid fa-arrow-right ml-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+                            </a>
                         </div>
-
                     </div>
-                    <div class="card">
+
+                    <!-- Card 3 -->
+                    <div class="card group h-full">
                         <div
-                            class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-lg hover:bg-gray-100  dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                            class="h-full p-6 bg-white dark:bg-gray-800 border border-indigo-500 dark:border-gray-700 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 hover:border-indigo-300 dark:hover:border-indigo-500 flex flex-col">
                             <i class="fa-solid fa-wifi text-5xl mb-5 text-gradient"></i>
-
-                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white ">Magang
-                                dan Studpen Internet of Things (IoT)</h5>
-                            <p class="font-normal text-gray-600 dark:text-gray-400">Terlibat dalam pengembangan
-                                perangkat terhubung, sensor, platform IoT, dan analisis data real-time.</p>
+                            <h3 class="text-xl md:text-2xl font-bold mb-3 text-gray-900 dark:text-white">
+                                Magang dan Studi Independen Internet of Things (IoT)
+                            </h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-6 flex-grow">
+                                Terlibat dalam pengembangan perangkat terhubung, sensor, platform IoT, dan analisis data
+                                real-time.
+                            </p>
                             <a href="{{ route('login') }}"
-                                class="font-bold px-7 py-3 mt-15 inline-flex justify-center items-center text-white rounded-lg gradient">Daftar
-                                Sekarang<i
-                                    class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i></a>
+                                class="w-full inline-flex items-center px-5 py-3 gradient text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 group-hover:translate-x-1">
+                                Daftar Sekarang
+                                <i
+                                    class="fa-solid fa-arrow-right ml-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+                            </a>
                         </div>
-
                     </div>
-                    <div class="card">
+
+                    <!-- Card 4 -->
+                    <div class="card group h-full">
                         <div
-                            class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-lg hover:bg-gray-100  dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                            class="h-full p-6 bg-white dark:bg-gray-800 border border-indigo-500 dark:border-gray-700 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 hover:border-indigo-300 dark:hover:border-indigo-500 flex flex-col">
                             <i class="fa-solid fa-vr-cardboard text-5xl mb-5 text-gradient"></i>
-
-                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white ">Magang
-                                dan Studpen Mixed Reality (AR/VR)</h5>
-                            <p class="font-normal text-gray-600 dark:text-gray-400">Jelajahi pengembangan aplikasi
-                                Augmented dan Virtual Reality untuk simulasi dan visualisasi.</p>
+                            <h3 class="text-xl md:text-2xl font-bold mb-3 text-gray-900 dark:text-white">
+                                Magang dan Studi Independen Mixed Reality (AR/VR)
+                            </h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-6 flex-grow">
+                                Jelajahi pengembangan aplikasi Augmented dan Virtual Reality untuk simulasi dan
+                                visualisasi.
+                            </p>
                             <a href="{{ route('login') }}"
-                                class="font-bold px-7 py-3 mt-15 inline-flex justify-center items-center text-white rounded-lg gradient">Daftar
-                                Sekarang<i
-                                    class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i></a>
+                                class="w-full inline-flex items-center px-5 py-3 gradient text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 group-hover:translate-x-1">
+                                Daftar Sekarang
+                                <i
+                                    class="fa-solid fa-arrow-right ml-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+                            </a>
                         </div>
-
                     </div>
-                    <div class="card">
+
+                    <!-- Card 5 -->
+                    <div class="card group h-full">
                         <div
-                            class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-lg hover:bg-gray-100  dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                            class="h-full p-6 bg-white dark:bg-gray-800 border border-indigo-500 dark:border-gray-700 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 hover:border-indigo-300 dark:hover:border-indigo-500 flex flex-col">
                             <i class="fa-solid fa-flask text-5xl mb-5 text-gradient"></i>
-
-                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white ">Magang
-                                dan Studpen Riset & Pengembangan</h5>
-                            <p class="font-normal text-gray-600 dark:text-gray-400">Berkontribusi pada penelitian
-                                canggih dan pengembangan solusi teknologi inovatif masa depan.</p>
+                            <h3 class="text-xl md:text-2xl font-bold mb-3 text-gray-900 dark:text-white">
+                                Magang dan Studi Independen Riset & Pengembangan
+                            </h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-6 flex-grow">
+                                Berkontribusi pada penelitian canggih dan pengembangan solusi teknologi inovatif masa
+                                depan.
+                            </p>
                             <a href="{{ route('login') }}"
-                                class="font-bold px-7 py-3 mt-15 inline-flex justify-center items-center text-white rounded-lg gradient">Daftar
-                                Sekarang<i
-                                    class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i></a>
+                                class="w-full inline-flex items-center px-5 py-3 gradient text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 group-hover:translate-x-1">
+                                Daftar Sekarang
+                                <i
+                                    class="fa-solid fa-arrow-right ml-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+                            </a>
                         </div>
-
                     </div>
-                    <div class="card">
+
+                    <!-- Card 6 -->
+                    <div class="card group h-full">
                         <div
-                            class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-lg hover:bg-gray-100  dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                            class="h-full p-6 bg-white dark:bg-gray-800 border border-indigo-500 dark:border-gray-700 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 hover:border-indigo-300 dark:hover:border-indigo-500 flex flex-col">
                             <i class="fa-solid fa-brain text-5xl mb-5 text-gradient"></i>
-
-                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white ">Magang
-                                dan Studpen AI & Ilmu Data</h5>
-                            <p class="font-normal text-gray-600 dark:text-gray-400">Pelajari pemrosesan data, machine
-                                learning, deep learning, dan alat visualisasi seperti Python dan Power BI.</p>
+                            <h3 class="text-xl md:text-2xl font-bold mb-3 text-gray-900 dark:text-white">
+                                Magang dan Studi Independen AI & Ilmu Data
+                            </h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-6 flex-grow">
+                                Pelajari pemrosesan data, machine learning, deep learning, dan alat visualisasi seperti
+                                Python dan Power BI.
+                            </p>
                             <a href="{{ route('login') }}"
-                                class="font-bold px-7 py-3 mt-15 inline-flex justify-center items-center text-white rounded-lg gradient">Daftar
-                                Sekarang<i
-                                    class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i></a>
+                                class="w-full inline-flex items-center px-5 py-3 gradient text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 group-hover:translate-x-1">
+                                Daftar Sekarang
+                                <i
+                                    class="fa-solid fa-arrow-right ml-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+                            </a>
                         </div>
-
                     </div>
-
-
                 </div>
-
             </div>
             <div class="text-center my-16">
-                <h2 class="dark:dark-text text-3xl font-bold mb-5">Peluang Lainnya
+                <h2 class="dark:text-gray-200 text-3xl font-bold mb-5">Peluang Lainnya
                 </h2>
-                <p class="dark:dark-text max-w-2xl mx-auto text-gray-600">Periksa kembali secara berkala untuk posisi
+                <p class="dark:text-gray-500 max-w-2xl mx-auto text-gray-600">Periksa kembali secara berkala untuk
+                    posisi
                     penuh waktu dan
                     lowongan karier lainnya.
 
@@ -465,9 +501,10 @@
     <section id="contact" class="min-h-screen py-20 px-5 md:px-10 flex items-center">
         <div class="max-h-6xl mx-auto">
             <div class="text-center my-16">
-                <h2 class="dark:dark-text text-3xl font-bold mb-5">Hubungi <span class="text-gradient">Kami</span>
+                <h2 class="dark:text-gray-200 text-3xl font-bold mb-5">Hubungi <span class="text-gradient">Kami</span>
                 </h2>
-                <p class="dark:dark-text max-w-2xl mx-auto text-gray-600">Siap untuk membahas proyek Anda berikutnya?
+                <p class="dark:text-gray-500 max-w-2xl mx-auto text-gray-600">Siap untuk membahas proyek Anda
+                    berikutnya?
                     Tim ahli
                     kami siap membantu.
 
@@ -537,12 +574,12 @@
                 <h4 class="mb-3 font-bold text-2xl text-gradient">
                     Raja
                     Teknik Solusi</h4>
-                <p class="dark:dark-text mx-auto text-gray-600">Engineering Excellence. Innovative Solutions.
+                <p class="dark:text-gray-200 mx-auto text-gray-600">Engineering Excellence. Innovative Solutions.
 
                 </p>
             </div>
             <div>
-                <h4 class="dark:dark-text mb-3 text-xl font-semibold">
+                <h4 class="dark:text-gray-200 mb-3 text-xl font-semibold">
                     Tautan Cepat</h4>
                 <div class="text-gray-600 dark:text-gray-300 flex flex-col gap-2">
                     <a class="hover:text-black dark:hover:text-white" href="#home">Home</a>
@@ -555,20 +592,24 @@
                 </div>
             </div>
             <div>
-                <h4 class="dark:dark-text mb-3 text-xl font-semibold">
+                <h4 class="dark:text-gray-200 mb-3 text-xl font-semibold">
                     Ikuti Kami</h4>
                 <div class="flex flex-row gap-5">
-                    <a href="" class="text-2xl hover:text-blue-600 transition"> <i
-                            class="fa-brands dark:dark-text fa-facebook"></i>
+                    <a href=""
+                        class="text-2xl dark:text-gray-200 dark:hover:text-blue-600  transition-colors duration-300 hover:text-blue-600  ">
+                        <i class="fa-brands  fa-facebook"></i>
                     </a>
-                    <a href="" class="text-2xl hover:text-sky-500 transition"> <i
-                            class="fa-brands dark:dark-text fa-twitter"></i>
+                    <a href=""
+                        class="text-2xl dark:text-gray-200 dark:hover:text-sky-500 transition-colors duration-300 hover:text-sky-500 ">
+                        <i class="fa-brands  fa-twitter"></i>
                     </a>
-                    <a href="" class="text-2xl hover:text-pink-600 transition"> <i
-                            class="fa-brands dark:dark-text fa-instagram"></i>
+                    <a href=""
+                        class="text-2xl dark:text-gray-200 hover:text-pink-600 dark:hover:text-pink-600 transition-colors duration-300  ">
+                        <i class="fa-brands   fa-instagram"></i>
                     </a>
-                    <a href="" class="text-2xl hover:text-blue-700 transition"> <i
-                            class="fa-brands dark:dark-text fa-linkedin"></i>
+                    <a href=""
+                        class="text-2xl dark:text-gray-200 dark:hover:text-blue-700 transition-colors duration-300 hover:text-blue-700 ">
+                        <i class="fa-brands  fa-linkedin"></i>
                     </a>
                 </div>
 
@@ -576,7 +617,7 @@
 
         </div>
         <div class="border-t border-gray-200 mt-8 pt-6 text-center text-sm">
-            <p class="dark:dark-text">© 2025 Raja Teknik Solusi. Hak cipta dilindungi.</p>
+            <p class="dark:text-gray-200">© 2025 Raja Teknik Solusi. Hak cipta dilindungi.</p>
         </div>
 
     </footer>

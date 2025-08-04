@@ -22,6 +22,8 @@ cd website-rts-studpen
 #### 3. install dependencies
 ```sh
 composer install
+```
+```sh
 npm install
 ```
 #### 4. Copy .env
@@ -55,6 +57,7 @@ php artisan serve
 ``` 
 
 > Langkah 8 dan 9 dijalankan pada terminal terpisah❗
+> Kredensial login admin [Email : admin@mail.com | Kata Sandi : admin1234]  ada di /database/seeders/RoleSeeder.php
 
 <br>
 <br>

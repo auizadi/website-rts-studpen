@@ -8,6 +8,8 @@
     <title>PT RAJA TEKNIK SOLUSI</title>
     <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
 
     <style>
         .text-gradient {
@@ -42,15 +44,18 @@
 
 <body class="bg-[#fffef0] dark:bg-gray-900">
     {{-- navbar --}}
-    <nav class="bg-white border-gray-200 dark:bg-gray-900/95 sticky top-0 shadow-md shadow-gray-200/10 z-50">
-        <div class="max-w-screen-xl flex  flex-wrap items-center justify-between mx-auto p-4">
+    <nav class="bg-white border-gray-200 dark:bg-gray-900/95 sticky top-0 shadow-md shadow-gray-200/10 z-50"
+        x-data="{ active: 'home' }">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <!-- Logo -->
             <a href="#home" class="flex items-center space-x-3 rtl:space-x-reverse">
-                {{-- <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" /> --}}
                 <span
-                    class="text-gradient self-center text-3xl tracking-wide  font-bold whitespace-nowrap dark:text-white">RTL</span>
+                    class="text-gradient self-center text-3xl tracking-wide font-bold whitespace-nowrap dark:text-white">RTL</span>
             </a>
+
+            <!-- Hamburger -->
             <button data-collapse-toggle="navbar-default" type="button"
-                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-400 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-400 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                 aria-controls="navbar-default" aria-expanded="false">
                 <span class="sr-only">Open main menu</span>
                 <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -59,58 +64,53 @@
                         d="M1 1h15M1 7h15M1 13h15" />
                 </svg>
             </button>
+
+            <!-- Navigation -->
             <div class="hidden w-full md:block md:w-auto" id="navbar-default">
                 <ul
-                    class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
-                    <li>
-                        <a href="#home"
-                            class="block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
-                            aria-current="page">Home</a>
-                    </li>
-                    <li>
-                        <a href="#about-us"
-                            class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About
-                            us</a>
-                    </li>
-                    <li>
-                        <a href="#portfolio"
-                            class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Portfolio</a>
-                    </li>
-                    <li>
-                        <a href="#articles"
-                            class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Articles</a>
-                    </li>
-                    <li>
-                        <a href="#careers"
-                            class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Careers</a>
-                    </li>
-                    <li>
-                        <a href="#services"
-                            class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
-                    </li>
-                    <li>
-                        <a href="#contact"
-                            class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
-                    </li>
+                    class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
+                    <template
+                        x-for="item in ['home', 'about-us', 'portfolio', 'articles', 'careers', 'services', 'contact']"
+                        :key="item">
+                        <li>
+                            <a :href="'#' + item" @click="active = item"
+                                :class="active === item ?
+                                    'font-semibold md:border-b-2 pb-1 text-blue-700 border-blue-700' :
+                                    'text-gray-900 dark:text-white'"
+                                class="block py-2 px-3 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 capitalize"
+                                x-text="item.replace('-', ' ')">
+                            </a>
+                        </li>
+                    </template>
                 </ul>
             </div>
-            {{-- login --}}
-            <div class="hidden md:flex md:order-2 items-center gap-4">
+
+            <!-- Login/Register -->
+            <div class="hidden md:hidden lg:flex items-center gap-4">
                 @if (Route::has('login'))
                     @auth
-                        <a href="{{ url('/dashboard') }}"
-                            class="inline-block px-5 py-1.5  dark:text-[#EDEDEC] border-[#19140035] hover:border-[#1915014a] border  text-[#1b1b18] dark:border-[#3E3E3A] dark:hover:border-[#62605b] rounded-sm text-sm font-semibold leading-normal">
-                            Dashboard
-                        </a>
+                        @role ('admin')
+                            <a href="{{ route('instruktur.index') }}" target="_blank"
+                                class="inline-block px-5 py-1.5 text-sm font-semibold border text-[#1b1b18] dark:text-[#EDEDEC] border-[#19140035] dark:border-[#3E3E3A] hover:border-[#1915014a] dark:hover:border-[#62605b] rounded-sm leading-normal">
+                                Dashboard
+                            </a>
+                        @else
+                            <!-- Jika user biasa (non-admin) -->
+                            <a href="{{ url('/dashboard') }}" target="_blank"
+                                class="inline-block px-5 py-1.5 text-sm font-semibold border text-[#1b1b18] dark:text-[#EDEDEC] border-[#19140035] dark:border-[#3E3E3A] hover:border-[#1915014a] dark:hover:border-[#62605b] rounded-sm leading-normal">
+                                Dashboard
+                            </a>
+                        @endrole
                     @else
+                        <!-- Jika belum login -->
                         <a href="{{ route('login') }}"
-                            class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] text-[#1b1b18] border border-transparent hover:border-[#19140035] dark:hover:border-[#3E3E3A] rounded-sm text-sm font-semibold border-slate-300 leading-normal">
+                            class="inline-block px-5 py-1.5 text-sm font-semibold text-[#1b1b18] dark:text-[#EDEDEC] border border-transparent hover:border-[#19140035] dark:hover:border-[#3E3E3A] rounded-sm leading-normal">
                             Log in
                         </a>
 
                         @if (Route::has('register'))
                             <a href="{{ route('register') }}"
-                                class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] border-[#19140035] hover:border-[#1915014a] border text-[#1b1b18] bg-blue-500  rounded-sm text-sm font-semibold  leading-normal">
+                                class="inline-block px-5 py-1.5 text-sm font-semibold text-[#1b1b18] dark:text-[#EDEDEC] bg-blue-500 border border-[#19140035] hover:border-[#1915014a] rounded-sm leading-normal">
                                 Register
                             </a>
                         @endif
@@ -118,34 +118,10 @@
                 @endif
             </div>
         </div>
-        <!-- Mobile menu (hidden by default) -->
-        <div class="md:hidden hidden w-full" id="mobile-menu">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                @if (Route::has('login'))
-                    <div class="flex flex-col space-y-2 px-3 py-2">
-                        @auth
-                            <a href="{{ url('/dashboard') }}"
-                                class="nav-auth-btn px-5 py-2 text-sm font-semibold rounded-sm text-center">
-                                Dashboard
-                            </a>
-                        @else
-                            <a href="{{ route('login') }}"
-                                class="nav-auth-btn px-5 py-2 text-sm font-semibold rounded-sm text-center">
-                                Log in
-                            </a>
-
-                            @if (Route::has('register'))
-                                <a href="{{ route('register') }}"
-                                    class="nav-auth-btn bg-blue-500 text-white px-5 py-2 text-sm font-semibold rounded-sm text-center hover:bg-blue-600">
-                                    Register
-                                </a>
-                            @endif
-                        @endauth
-                    </div>
-                @endif
-            </div>
-        </div>
     </nav>
+
+
+
 
     {{-- home --}}
     <section id="home" class="min-h-screen px-5 md:px-10 flex items-center -mt-20 md:-mt-7">
@@ -159,10 +135,12 @@
                 lunak, dan R&D
                 terdepan untuk
                 mendorong kesuksesan industri dan teknologi Anda.</p>
+
             <a href="#services"
-                class="inline-block text-white font-bold px-8 py-3 rounded-full gradient transition duration-300">Jelajahi
+                class="hidden md:inline-block text-white font-bold px-8 py-3 rounded-full gradient transition duration-300">Jelajahi
                 Layanan
                 Kami</a>
+            <x-auth-buttons />
 
         </div>
 
@@ -223,7 +201,7 @@
             class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center items-center justify-center mx-auto">
             <div class="card h-full">
                 <a href="#"
-                    class="block h-full max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-lg hover:bg-gray-100 text-center dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                    class="pointer-events-none block h-full max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-lg hover:bg-gray-100 text-center dark:bg-gray-800 dark:border-gray-700 dark:hover:border-indigo-500">
                     <i class="fa-solid fa-brain text-5xl mb-5 text-gradient"></i>
 
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">AI & DATA
@@ -234,7 +212,7 @@
             </div>
             <div class="card h-full">
                 <a href="#"
-                    class="block h-full max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-lg hover:bg-gray-100 text-center dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                    class="pointer-events-none block h-full max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-lg hover:bg-gray-100 text-center dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                     <i class="fa-solid fa-robot text-5xl mb-5 text-gradient"></i>
 
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Industrial
@@ -246,7 +224,7 @@
             </div>
             <div class="card h-full">
                 <a href="#"
-                    class="block h-full max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-lg hover:bg-gray-100 text-center dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                    class="pointer-events-none block h-full max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-lg hover:bg-gray-100 text-center dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                     <i class="fa-solid fa-wifi text-5xl mb-5 text-gradient"></i>
 
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Internet of
@@ -258,7 +236,7 @@
             </div>
             <div class="card h-full">
                 <a href="#"
-                    class="block h-full max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-lg hover:bg-gray-100 text-center dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                    class="pointer-events-none block h-full max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-lg hover:bg-gray-100 text-center dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                     <i class="fa-solid fa-code text-5xl mb-5 text-gradient"></i>
 
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Software
@@ -270,7 +248,7 @@
             </div>
             <div class="card h-full">
                 <a href="#"
-                    class="block h-full max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-lg hover:bg-gray-100 text-center dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                    class="pointer-events-none block h-full max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-lg hover:bg-gray-100 text-center dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                     <i class="fa-solid fa-vr-cardboard text-5xl mb-5 text-gradient"></i>
 
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Mixed Reality
@@ -282,7 +260,7 @@
             </div>
             <div class="card h-full">
                 <a href="#"
-                    class="block h-full max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-lg hover:bg-gray-100 text-center dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                    class="pointer-events-none block h-full max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-lg hover:bg-gray-100 text-center dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                     <i class="fa-solid fa-flask text-5xl text-gradient mb-5 text-gradient"></i>
 
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Research &

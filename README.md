@@ -1,66 +1,101 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# WEBSITE PT RAJA TEKNIK SOLUSI
+### Deskripsi proyek
+- Tugas studi independen mandiri kampus berdampak 2025 di PT RAJA TEKNIK SOLUSI
+<br>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+> ### PREREQUISITE❗
+> - install Git
+> - install PHP 8.2 
+> - install composer
+> - install nodejs
+<br>
 
-## About Laravel
+### Cara menjalankannya
+#### 1. Clone atau download source code
+```sh
+git clone https://github.com/auizadi/website-rts-studpen.git
+```
+#### 2. Masuk ke direktori proyek
+```sh
+cd website-rts-studpen
+```
+#### 3. install dependencies
+```sh
+composer install
+npm install
+```
+#### 4. Copy .env
+```sh
+cp .env.example .env
+```
+#### 5. Generate key
+```sh
+php artisan key:generate
+```
+#### 6. Setup database pada .env
+```sh
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=nama_database
+DB_USERNAME=root
+DB_PASSWORD=
+```
+#### 7. Migrasi database
+```sh
+php artisan migrate --seed
+```
+#### 8. Generate asset front end
+```sh
+npm run dev
+``` 
+#### 9. Jalankan aplikasi 
+```sh
+php artisan serve
+``` 
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+> Langkah 8 dan 9 dijalankan pada terminal terpisah❗
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+<br>
+<br>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
+### 1. Tampilan Home
+![tampilan home](/assets/home.png "tampilan home")
+<br>
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### 2. Tampilan About Us
+![tampilan About Us](/assets/about.png "tampilan About Us")
+<br>
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### 3. Tampilan Portfolio
+![tampilan Portfolio](/assets/portofolio.png "tampilan Portfolio")
+<br>
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 4. Tampilan Articles 
+![tampilan Articles](/assets/articles.png "tampilan Articles")
+<br>
 
-## Laravel Sponsors
+### 5. Tampilan Carrers
+![tampilan Carrers](/assets/carrers.png "tampilan Carrers")
+<br>
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### 6. Tampilan Services
+![tampilan services](/assets/services.png "tampilan services")
+<br>
 
-### Premium Partners
+### 7. Tampilan contact
+![tampilan contact](/assets/contact.png "tampilan contact")
+<br>
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+### 8. Tampilan Login
+![tampilan login](/assets/login.png "tampilan login")
+<br>
 
-## Contributing
+### 9. Tampilan Dashboard
+![tampilan dashboard](/assets/dashboard.png "tampilan dashboard")
+<br>
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### 10. Tampilan Pesan
+![tampilan pesan](/assets/pesan.png "tampilan pesan")
+<br>

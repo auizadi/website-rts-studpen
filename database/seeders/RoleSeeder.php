@@ -31,7 +31,7 @@ class RoleSeeder extends Seeder
             'password' => bcrypt('admin1234'),
         ]);
 
-        // assign role ti admin
+        // assign role to admin
         $admin->assignRole('admin');
     }
 }

@@ -49,13 +49,13 @@
                                     {{ $pesan->content }}
                                 </td>
                                 <td class="px-6 py-4">
-                                    {{ $pesan->created_at->format('d M Y H:i') }}
+                                    {{ $pesan->created_at->timezone('Asia/Jakarta')->format('d M Y H:i') }}
                                 </td>
 
                             </tr>
                         @empty
                             <tr>
-                                <td colspan="4" class="px-6 py-4 text-center">Belum ada pesan.</td>
+                                <td colspan="5" class="px-6 py-4 text-center">Belum ada pesan.</td>
                             </tr>
                         @endforelse
                     </tbody>

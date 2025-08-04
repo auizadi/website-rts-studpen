@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->string('nama_pengirim');
+            $table->string('timezone')->default('UTC');
             $table->text('content')->nullable(false);
             $table->timestamps();
         });

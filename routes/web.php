@@ -4,11 +4,14 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InstrukturController;
 use App\Http\Controllers\PesanController;
+use App\Livewire\Beranda;
+use App\Livewire\LearningSystem;
 use App\Models\Pesan;
 
 Route::get('/', function () {
     return view('landing');
 });
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -23,7 +26,7 @@ Route::middleware('auth')->group(function () {
 // messages
 Route::post('/kirim-pesan', [PesanController::class, 'store'])->name('kirimPesan');
 
-Route::middleware(['auth', 'role:admin'])->group(function(){
+Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::get('/instruktur/index', [InstrukturController::class, 'index'])->name('instruktur.index');
     Route::get('/pesan', [PesanController::class, 'index'])->name('pesan.index');
     Route::get('/instruktur/create', [InstrukturController::class, 'create'])->name('instruktur.create');
@@ -31,4 +34,12 @@ Route::middleware(['auth', 'role:admin'])->group(function(){
     Route::delete('/instruktur/{id}', [InstrukturController::class, 'destroy'])->name('instruktur.destroy');
 });
 
-require __DIR__.'/auth.php';
+// SPA livewire
+Route::middleware(['auth', 'role:siswa'])->group(function () {
+    Route::get('/beranda', Beranda::class)->name('beranda');
+});
+
+
+
+
+require __DIR__ . '/auth.php';

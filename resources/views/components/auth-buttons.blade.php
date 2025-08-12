@@ -3,17 +3,17 @@
         @role('admin')
             <a href="{{ route('instruktur.index') }}"
                 class="inline-block px-5 py-1.5 text-sm font-semibold border text-[#1b1b18] dark:text-[#EDEDEC] border-[#19140035] dark:border-[#3E3E3A] hover:border-[#1915014a] dark:hover:border-[#62605b] rounded-sm leading-normal">
-                Dashboard Admin
+                Dashboard
             </a>
             @elserole('siswa')
-            <a href="{{ route('beranda-siswa') }}"
+            <a href="{{ route('homepage-student') }}"
                 class="inline-block px-5 py-1.5 text-sm font-semibold border text-[#1b1b18] dark:text-[#EDEDEC] border-[#19140035] dark:border-[#3E3E3A] hover:border-[#1915014a] dark:hover:border-[#62605b] rounded-sm leading-normal">
-                Dashboard Siswa
+                Dashboard
             </a>
             @elserole('instruktur')
             <a href="{{ route('beranda-instruktur') }}"
                 class="inline-block px-5 py-1.5 text-sm font-semibold border text-[#1b1b18] dark:text-[#EDEDEC] border-[#19140035] dark:border-[#3E3E3A] hover:border-[#1915014a] dark:hover:border-[#62605b] rounded-sm leading-normal">
-                Dashboard Instruktur
+                Dashboard 
             </a>
         @else
             <a href="{{ url('/dashboard') }}"

@@ -38,7 +38,7 @@ class AuthenticatedSessionController extends Controller
             return redirect()->route('beranda-instruktur');
         }
         if (Auth::user()->hasRole('siswa')) {
-            return redirect()->route('beranda-siswa');
+            return redirect()->route('homepage-student');
         }
         return redirect()->route('dashboard');
     }

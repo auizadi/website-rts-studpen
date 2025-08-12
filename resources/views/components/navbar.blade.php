@@ -19,8 +19,8 @@
                 class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                 <li>
                     @role('siswa')
-                        <a href="{{ route('beranda-siswa') }}"
-                            class="{{ request()->routeIs('beranda-siswa') ? 'bg-blue-500 px-4 py-1 rounded-full text-white' : 'text-gray-300' }}"
+                        <a href="{{ route('homepage-student') }}"
+                            class="{{ request()->routeIs('homepage-student') ? 'bg-blue-500 px-4 py-1 rounded-full text-white' : 'text-gray-300' }}"
                             wire:navigate>Beranda</a>
                     @endrole
                     @role('instruktur')

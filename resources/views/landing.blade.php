@@ -96,11 +96,11 @@
                                 class="inline-block px-5 py-1.5 text-sm font-semibold border text-[#1b1b18] dark:text-[#EDEDEC] border-[#19140035] dark:border-[#3E3E3A] hover:border-[#1915014a] dark:hover:border-[#62605b] rounded-sm leading-normal">
                                 Dashboard
                             </a>
-                            {{-- @elserole('siswa')
-                            <a href="{{ route('beranda-siswa') }}"
+                            @elserole('siswa')
+                            <a href="{{ route('homepage-student') }}"
                                 class="inline-block px-5 py-1.5 text-sm font-semibold border text-[#1b1b18] dark:text-[#EDEDEC] border-[#19140035] dark:border-[#3E3E3A] hover:border-[#1915014a] dark:hover:border-[#62605b] rounded-sm leading-normal">
                                 Dashboard
-                            </a> --}}
+                            </a>
                             @elserole('instruktur')
                             <a href="{{ route('beranda-instruktur') }}"
                                 class="inline-block px-5 py-1.5 text-sm font-semibold border text-[#1b1b18] dark:text-[#EDEDEC] border-[#19140035] dark:border-[#3E3E3A] hover:border-[#1915014a] dark:hover:border-[#62605b] rounded-sm leading-normal">
@@ -489,7 +489,7 @@
     </section>
     {{-- contact --}}
     <section id="contact" class="min-h-screen py-20 px-5 md:px-10 flex items-center">
-        
+
         <div class="max-h-6xl mx-auto">
             <div class="text-center my-16">
                 <h2 class="dark:text-gray-200 text-3xl font-bold mb-5">Hubungi <span class="text-gradient">Kami</span>

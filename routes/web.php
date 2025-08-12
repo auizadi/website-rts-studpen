@@ -8,6 +8,7 @@ use App\Http\Controllers\PesanController;
 use App\Livewire\Akun;
 use App\Livewire\BerandaInstruktur;
 use App\Livewire\BerandaSiswa;
+use App\Livewire\HomepageStudent;
 use App\Livewire\LearningSystem;
 use App\Livewire\Soal;
 
@@ -25,6 +26,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::get('/akun', Akun::class)->name('akun');
+    Route::get('/soal', Soal::class)->name('soal');
 });
 
 // messages
@@ -40,14 +43,14 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
 
 // SPA livewire
 Route::middleware(['auth', 'role:siswa'])->group(function () {
-    Route::get('/akun', Akun::class)->name('akun');
-    Route::get('/soal', Soal::class)->name('soal');
+
+    Route::get('homepage-student', HomepageStudent::class)->name('homepage-student');
 });
 
 Route::middleware(['auth', 'role:instruktur'])->group(function () {
-    Route::get('/akun', Akun::class)->name('akun');
-    Route::get('/soal', Soal::class)->name('soal');
+
     Route::get('/beranda', BerandaInstruktur::class)->name('beranda-instruktur');
 });
+
 
 require __DIR__ . '/auth.php';

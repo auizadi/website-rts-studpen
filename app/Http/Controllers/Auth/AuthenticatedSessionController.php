@@ -30,8 +30,17 @@ class AuthenticatedSessionController extends Controller
 
         // flash message
         session()->flash('welcome', 'Selamat Datang, ' . Auth::user()->name . '!');
-
-        return redirect()->intended(route('instruktur.index', absolute: false));
+        // redirect based on role
+        if (Auth::user()->hasRole('admin')) {
+            return redirect()->route('instruktur.index');
+        }
+        if (Auth::user()->hasRole('instruktur')) {
+            return redirect()->route('beranda-instruktur');
+        }
+        if (Auth::user()->hasRole('siswa')) {
+            return redirect()->route('beranda-siswa');
+        }
+        return redirect()->route('dashboard');
     }
 
     /**

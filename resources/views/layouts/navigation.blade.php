@@ -7,7 +7,8 @@
                 <div class="shrink-0 flex items-center">
                     @if (Auth::user()->hasRole('admin'))
                         <a href="{{ route('instruktur.index') }}">
-                            <x-application-logo class="block h-9 w-auto fill-current text-gray-800 dark:text-gray-200" />
+                            <span
+                                class="text-transparent bg-clip-text bg-gradient-to-r from-[#ff4800] via-[#e0007c] to-[#3b82f6] self-center text-3xl tracking-wide font-bold whitespace-nowrap ">RTS</span>
                         </a>
                     @endif
                 </div>

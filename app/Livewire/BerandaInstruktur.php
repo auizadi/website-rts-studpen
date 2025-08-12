@@ -4,10 +4,10 @@ namespace App\Livewire;
 
 use Livewire\Component;
 
-class LearningSystem extends Component
+class BerandaInstruktur extends Component
 {
     public function render()
     {
-        return view('livewire.learning-system');
+        return view('livewire.beranda-instruktur');
     }
 }

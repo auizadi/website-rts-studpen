@@ -1,12 +1,16 @@
 <?php
 
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InstrukturController;
 use App\Http\Controllers\PesanController;
-use App\Livewire\Beranda;
+use App\Livewire\Akun;
+use App\Livewire\BerandaInstruktur;
+use App\Livewire\BerandaSiswa;
 use App\Livewire\LearningSystem;
-use App\Models\Pesan;
+use App\Livewire\Soal;
+
 
 Route::get('/', function () {
     return view('landing');
@@ -36,10 +40,14 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
 
 // SPA livewire
 Route::middleware(['auth', 'role:siswa'])->group(function () {
-    Route::get('/beranda', Beranda::class)->name('beranda');
+    Route::get('/akun', Akun::class)->name('akun');
+    Route::get('/soal', Soal::class)->name('soal');
 });
 
-
-
+Route::middleware(['auth', 'role:instruktur'])->group(function () {
+    Route::get('/akun', Akun::class)->name('akun');
+    Route::get('/soal', Soal::class)->name('soal');
+    Route::get('/beranda', BerandaInstruktur::class)->name('beranda-instruktur');
+});
 
 require __DIR__ . '/auth.php';

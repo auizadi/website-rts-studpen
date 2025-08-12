@@ -20,7 +20,7 @@
                 <li>
                     @role('siswa')
                         <a href="{{ route('homepage-student') }}"
-                            class="{{ request()->routeIs('homepage-student') ? 'bg-blue-500 px-4 py-1 rounded-full text-white' : 'text-gray-300' }}"
+                            class="{{ request()->routeIs('homepage-student') ? 'bg-blue-500 px-4 py-1 rounded-full text-white' : 'text-black' }}"
                             wire:navigate>Beranda</a>
                     @endrole
                     @role('instruktur')
@@ -40,7 +40,7 @@
                 </li>
                 <li>
                     <a href="{{ route('akun') }}"
-                        class="{{ request()->routeIs('akun') ? 'bg-blue-500 px-4 py-1 rounded-full text-white' : 'text-white hover:text-blue-500' }}"
+                        class="{{ request()->routeIs('akun') ? 'bg-blue-500 px-4 py-1 rounded-full text-white' : ' hover:text-blue-500' }}"
                         wire:navigate>Akun</a>
                 </li>
 

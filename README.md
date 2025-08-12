@@ -102,3 +102,19 @@ php artisan serve
 ### 10. Tampilan Pesan
 ![tampilan pesan](/assets/pesan.png "tampilan pesan")
 <br>
+
+### 11. Tampilan Beranda Siswa
+![tampilan pesan](/assets/siswa-beranda.png "tampilan pesan")
+<br>
+
+### 12. Tampilan Beranda Instruktur
+![tampilan pesan](/assets/instruktur-beranda.png "tampilan pesan")
+<br>
+
+### 13. Tampilan menu akun
+![tampilan pesan](/assets/akun.png "tampilan pesan")
+<br>
+
+### 14. Tampilan menu soal
+![tampilan pesan](/assets/soal.png "tampilan pesan")
+<br>

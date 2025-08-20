@@ -40,7 +40,7 @@
                 </li>
                 <li>
                     <a href="{{ route('akun') }}"
-                        class="{{ request()->routeIs('akun') ? 'bg-blue-500 px-4 py-1 rounded-full text-white' : ' hover:text-blue-500' }}"
+                        class="{{ request()->routeIs('akun') ? 'bg-blue-500 px-4 py-1 rounded-full text-white' : ' hover:text-blue-500 text-white' }}"
                         wire:navigate>Akun</a>
                 </li>
 

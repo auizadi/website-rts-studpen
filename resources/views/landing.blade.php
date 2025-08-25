@@ -347,130 +347,59 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                     <!-- Card 1 -->
-                    <div class="card group h-full">
-                        <div
-                            class="h-full p-6 bg-white dark:bg-gray-800 border border-indigo-500 dark:border-gray-700 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 hover:border-indigo-300 dark:hover:border-indigo-500 flex flex-col">
-                            <i class="fa-solid fa-laptop-code text-5xl mb-5 text-gradient"></i>
-                            <h3 class="text-xl md:text-2xl font-bold mb-3 text-gray-900 dark:text-white">
-                                Magang dan Studi Independen Pengembangan Perangkat Lunak
-                            </h3>
-                            <p class="text-gray-600 dark:text-gray-300 mb-6 flex-grow">
-                                Pelajari pengembangan web dan aplikasi seluler, struktur data, algoritma, dan praktik
-                                coding terbaik.
-                            </p>
-                            <a href="{{ route('login') }}"
-                                class="w-full inline-flex items-center px-5 py-3 gradient text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 group-hover:translate-x-1">
-                                Daftar Sekarang
-                                <i
-                                    class="fa-solid fa-arrow-right ml-2 transition-transform duration-300 group-hover:translate-x-1"></i>
-                            </a>
-                        </div>
-                    </div>
+                    @livewire('card-carrers', [
+                        'image' => 'fa-laptop-code',
+                        'title' => 'Magang dan Studi Independen Pengembangan Perangkat Lunak',
+                        'description' => 'Pelajari pengembangan web dan aplikasi seluler, struktur data, algoritma, dan praktik coding terbaik.',
+                        'detailContent' => 'program magang',
+                        'loginRoute' => route('login'),
+                    ])
 
                     <!-- Card 2 -->
-                    <div class="card group h-full">
-                        <div
-                            class="h-full p-6 bg-white dark:bg-gray-800 border border-indigo-500 dark:border-gray-700 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 hover:border-indigo-300 dark:hover:border-indigo-500 flex flex-col">
-                            <i class="fa-solid fa-robot text-5xl mb-5 text-gradient"></i>
-                            <h3 class="text-xl md:text-2xl font-bold mb-3 text-gray-900 dark:text-white">
-                                Magang dan Studi Independen Otomasi Industri
-                            </h3>
-                            <p class="text-gray-600 dark:text-gray-300 mb-6 flex-grow">
-                                Dapatkan pengalaman dalam pemrograman PLC, sistem kontrol, robotika, dan integrasi
-                                sistem otomasi.
-                            </p>
-                            <a href="{{ route('login') }}"
-                                class="w-full inline-flex items-center px-5 py-3 gradient text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 group-hover:translate-x-1">
-                                Daftar Sekarang
-                                <i
-                                    class="fa-solid fa-arrow-right ml-2 transition-transform duration-300 group-hover:translate-x-1"></i>
-                            </a>
-                        </div>
-                    </div>
+                    @livewire('card-carrers', [
+                        'image' => 'fa-robot',
+                        'title' => 'Magang dan Studi Independen Otomasi Industri',
+                        'description' => 'Dapatkan pengalaman dalam pemrograman PLC, sistem kontrol, robotika, dan integrai sistem otomasi.',
+                        'detailContent' => 'program magang',
+                        'loginRoute' => route('login'),
+                    ])
 
                     <!-- Card 3 -->
-                    <div class="card group h-full">
-                        <div
-                            class="h-full p-6 bg-white dark:bg-gray-800 border border-indigo-500 dark:border-gray-700 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 hover:border-indigo-300 dark:hover:border-indigo-500 flex flex-col">
-                            <i class="fa-solid fa-wifi text-5xl mb-5 text-gradient"></i>
-                            <h3 class="text-xl md:text-2xl font-bold mb-3 text-gray-900 dark:text-white">
-                                Magang dan Studi Independen Internet of Things (IoT)
-                            </h3>
-                            <p class="text-gray-600 dark:text-gray-300 mb-6 flex-grow">
-                                Terlibat dalam pengembangan perangkat terhubung, sensor, platform IoT, dan analisis data
-                                real-time.
-                            </p>
-                            <a href="{{ route('login') }}"
-                                class="w-full inline-flex items-center px-5 py-3 gradient text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 group-hover:translate-x-1">
-                                Daftar Sekarang
-                                <i
-                                    class="fa-solid fa-arrow-right ml-2 transition-transform duration-300 group-hover:translate-x-1"></i>
-                            </a>
-                        </div>
-                    </div>
+                    @livewire('card-carrers', [
+                        'image' => 'fa-wifi',
+                        'title' => 'Magang dan Studi Independen Internet of Things (IoT)',
+                        'description' => 'Terlibat dalam pengembangan perangkat terhubung, sensor, platform IoT, dan analisis data real-time.',
+                        'detailContent' => 'program magang',
+                        'loginRoute' => route('login'),
+                    ])
 
                     <!-- Card 4 -->
-                    <div class="card group h-full">
-                        <div
-                            class="h-full p-6 bg-white dark:bg-gray-800 border border-indigo-500 dark:border-gray-700 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 hover:border-indigo-300 dark:hover:border-indigo-500 flex flex-col">
-                            <i class="fa-solid fa-vr-cardboard text-5xl mb-5 text-gradient"></i>
-                            <h3 class="text-xl md:text-2xl font-bold mb-3 text-gray-900 dark:text-white">
-                                Magang dan Studi Independen Mixed Reality (AR/VR)
-                            </h3>
-                            <p class="text-gray-600 dark:text-gray-300 mb-6 flex-grow">
-                                Jelajahi pengembangan aplikasi Augmented dan Virtual Reality untuk simulasi dan
-                                visualisasi.
-                            </p>
-                            <a href="{{ route('login') }}"
-                                class="w-full inline-flex items-center px-5 py-3 gradient text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 group-hover:translate-x-1">
-                                Daftar Sekarang
-                                <i
-                                    class="fa-solid fa-arrow-right ml-2 transition-transform duration-300 group-hover:translate-x-1"></i>
-                            </a>
-                        </div>
-                    </div>
+                    @livewire('card-carrers', [
+                        'image' => 'fa-vr-cardboard',
+                        'title' => 'Magang dan Studi Independen Mixed Reality (AR/VR)',
+                        'description' => 'Jelajahi pengembangan aplikasi Augmented dan Virtual Reality untuk simulasi dan visualisasi.',
+                        'detailContent' => 'program magang',
+                        'loginRoute' => route('login'),
+                    ])
 
                     <!-- Card 5 -->
-                    <div class="card group h-full">
-                        <div
-                            class="h-full p-6 bg-white dark:bg-gray-800 border border-indigo-500 dark:border-gray-700 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 hover:border-indigo-300 dark:hover:border-indigo-500 flex flex-col">
-                            <i class="fa-solid fa-flask text-5xl mb-5 text-gradient"></i>
-                            <h3 class="text-xl md:text-2xl font-bold mb-3 text-gray-900 dark:text-white">
-                                Magang dan Studi Independen Riset & Pengembangan
-                            </h3>
-                            <p class="text-gray-600 dark:text-gray-300 mb-6 flex-grow">
-                                Berkontribusi pada penelitian canggih dan pengembangan solusi teknologi inovatif masa
-                                depan.
-                            </p>
-                            <a href="{{ route('login') }}"
-                                class="w-full inline-flex items-center px-5 py-3 gradient text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 group-hover:translate-x-1">
-                                Daftar Sekarang
-                                <i
-                                    class="fa-solid fa-arrow-right ml-2 transition-transform duration-300 group-hover:translate-x-1"></i>
-                            </a>
-                        </div>
-                    </div>
+                    @livewire('card-carrers', [
+                        'image' => 'fa-flask',
+                        'title' => 'Magang dan Studi Independen Riset & Pengembangan',
+                        'description' => 'Berkontribusi pada penelitian canggih dan pengembangan solusi teknologi inovatif masa depan.',
+                        'detailContent' => 'program magang',
+                        'loginRoute' => route('login'),
+                    ])
 
                     <!-- Card 6 -->
-                    <div class="card group h-full">
-                        <div
-                            class="h-full p-6 bg-white dark:bg-gray-800 border border-indigo-500 dark:border-gray-700 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 hover:border-indigo-300 dark:hover:border-indigo-500 flex flex-col">
-                            <i class="fa-solid fa-brain text-5xl mb-5 text-gradient"></i>
-                            <h3 class="text-xl md:text-2xl font-bold mb-3 text-gray-900 dark:text-white">
-                                Magang dan Studi Independen AI & Ilmu Data
-                            </h3>
-                            <p class="text-gray-600 dark:text-gray-300 mb-6 flex-grow">
-                                Pelajari pemrosesan data, machine learning, deep learning, dan alat visualisasi seperti
-                                Python dan Power BI.
-                            </p>
-                            <a href="{{ route('login') }}"
-                                class="w-full inline-flex items-center px-5 py-3 gradient text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 group-hover:translate-x-1">
-                                Daftar Sekarang
-                                <i
-                                    class="fa-solid fa-arrow-right ml-2 transition-transform duration-300 group-hover:translate-x-1"></i>
-                            </a>
-                        </div>
-                    </div>
+                    @livewire('card-carrers', [
+                        'image' => 'fa-brain',
+                        'title' => 'Magang dan Studi Independen AI & Ilmu Data',
+                        'description' => 'Pelajari pemrosesan data, machine learning, deep learning, dan alat visualisasi seperti Python dan Power BI.',
+                        'detailContent' => 'program magang',
+                        'loginRoute' => route('login'),
+                    ])
+                    
                 </div>
             </div>
             <div class="text-center my-16">

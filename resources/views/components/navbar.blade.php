@@ -1,4 +1,4 @@
-<nav class="bg-white border-gray-200 dark:bg-gray-900 shadow-xl shadow-white/5">
+<nav class="bg-white border-gray-200 dark:bg-gray-900 shadow-xl z-50 shadow-white/5 sticky top-0">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-5 p-4">
         <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
             <span
@@ -20,7 +20,7 @@
                 <li>
                     @role('siswa')
                         <a href="{{ route('homepage-student') }}"
-                            class="{{ request()->routeIs('homepage-student') ? 'bg-blue-500 px-4 py-1 rounded-full text-white' : 'text-black' }}"
+                            class="{{ request()->routeIs('homepage-student') ? 'bg-blue-500 px-4 py-1 rounded-full text-white' : 'dark:text-white text-black' }}"
                             wire:navigate>Beranda</a>
                     @endrole
                     @role('instruktur')

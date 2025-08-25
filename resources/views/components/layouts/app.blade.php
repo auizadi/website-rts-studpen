@@ -11,16 +11,16 @@
 
 </head>
 
-<body class="dark:bg-gray-900 bg-gray-100">
+<body class="dark:bg-gray-900 bg-gray-100 overflow-auto">
     {{-- navbar --}}
     @include('components.navbar')
 
 
     <div class="flex flex-row justify-between m-5">
         {{-- left sidebar --}}
-        @include('components.left-sidebar')
+        <livewire:left-sidebar>
         {{-- konten utama --}}
-        <div class="mx-5 flex-1">
+        <div class="mx-5 flex-1 min-h-screen p-5 bg-gray-100 rounded-lg overflow-y-auto">
             {{-- flash message --}}
             @if (session('welcome'))
                 <div x-data="{ show: true }" x-init="setTimeout(() => show = false, 4000)" x-show="show" x-transition
@@ -36,7 +36,7 @@
         </div>
 
         {{-- right sidebar --}}
-        @include('components.right-sidebar')
+        <livewire:right-sidebar>
 
 
     </div>

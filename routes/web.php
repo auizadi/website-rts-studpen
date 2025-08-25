@@ -8,8 +8,13 @@ use App\Http\Controllers\PesanController;
 use App\Livewire\Akun;
 use App\Livewire\BerandaInstruktur;
 use App\Livewire\BerandaSiswa;
+use App\Livewire\BuatSoal;
 use App\Livewire\HomepageStudent;
+use App\Livewire\KerjakanSoal;
 use App\Livewire\LearningSystem;
+use App\Livewire\QuestionForm;
+use App\Livewire\QuizPage;
+use App\Livewire\ShowSoal;
 use App\Livewire\Soal;
 
 
@@ -43,13 +48,14 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
 
 // SPA livewire
 Route::middleware(['auth', 'role:siswa'])->group(function () {
-
     Route::get('homepage-student', HomepageStudent::class)->name('homepage-student');
+    Route::get('kerjakan/{quiz}', KerjakanSoal::class)->name('kerjakan-soal');
 });
 
 Route::middleware(['auth', 'role:instruktur'])->group(function () {
-
     Route::get('/beranda', BerandaInstruktur::class)->name('beranda-instruktur');
+    Route::get('/buat-soal/{quiz}', BuatSoal::class)->name('buat-soal');
+    Route::get('/detail-soal/{quiz}', ShowSoal::class)->name('detail-soal');
 });
 
 

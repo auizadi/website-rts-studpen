@@ -31,6 +31,18 @@ class User extends Authenticatable
         return $this->hasMany(Pesan::class);
     }
 
+    public function answers()
+    {
+        return $this->hasMany(Answer::class);
+    }
+
+    public function quizzes()
+    {
+        return $this->belongsToMany(Quizzes::class, 'answers')
+            ->withPivot(['question_id', 'option_id'])
+            ->withTimestamps();
+    }
+
     /**
      * The attributes that should be hidden for serialization.
      *

@@ -1,10 +1,11 @@
 <div>
     <h2 class="text-xl font-bold mb-4">{{ $quiz->nama_soal }}</h2>
 
+
     <form wire:submit.prevent="save">
-        @foreach ($quiz->questions as $q)
+        @foreach ($quiz->questions as $index => $q)
             <div class="mb-4 p-4 border rounded-lg">
-                <p class="font-medium">{{ $q->pertanyaan }}</p>
+                <p class="font-medium">{{$index + 1}}.{{ $q->pertanyaan }}</p>
 
                 @foreach ($q->options as $opt)
                     <label class="flex items-center gap-2 mt-2">
@@ -13,6 +14,11 @@
                         {{ $opt->teks }}
                     </label>
                 @endforeach
+
+                {{-- tampilkan error kalau pertanyaan ini belum dijawab --}}
+                @error('answers.' . $q->id)
+                    <p class="text-red-500 text-sm mt-2">{{ $message }}</p>
+                @enderror
             </div>
         @endforeach
 

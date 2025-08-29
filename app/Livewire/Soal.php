@@ -8,8 +8,6 @@ use Livewire\Component;
 
 class Soal extends Component
 {
-    
-
 
     public function render()
     {

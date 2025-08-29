@@ -33,6 +33,4 @@
             <div>{{ Auth::user()->email }}</div>
         </div>
     </div>
-
-    {{-- informasi umum --}}
 </div>

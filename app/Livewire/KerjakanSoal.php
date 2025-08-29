@@ -10,16 +10,35 @@ use Livewire\Component;
 class KerjakanSoal extends Component
 {
     public $quiz;
-    public $answers = []; // array utk jawaban siswa
+    public $answers = [];
+    public $currentIndex = 0;
 
     public function mount(Quizzes $quiz)
     {
-        $this->quiz = $quiz;
+        $this->quiz = $quiz->load('questions.options');
     }
 
+    // Pindah ke soal tertentu (klik grid nomor)
+    public function goToQuestion($index)
+    {
+        if ($index >= 0 && $index < $this->quiz->questions->count()) {
+            $this->currentIndex = $index;
+        }
+    }
+
+    // Simpan jawaban
     public function save()
     {
-        // Simpan jawaban siswa
+        foreach ($this->quiz->questions as $q) {
+            if (!isset($this->answers[$q->id])) {
+                $this->addError('answers.' . $q->id, 'Pertanyaan ini wajib diisi.');
+            }
+        }
+
+        if ($this->getErrorBag()->isNotEmpty()) {
+            return;
+        }
+
         foreach ($this->answers as $questionId => $optionId) {
             Answer::updateOrCreate(
                 [
@@ -31,27 +50,16 @@ class KerjakanSoal extends Component
             );
         }
 
-        // Hitung jumlah benar
-        $benar = Answer::where('user_id', Auth::id())
-            ->where('quiz_id', $this->quiz->id)
-            ->whereHas('option', fn($q) => $q->where('is_correct', true))
-            ->count();
-
-        // Hitung total soal
-        $total = $this->quiz->questions()->count();
-
-        // Skala 100
-        $nilai = $total > 0 ? ($benar / $total) * 100 : 0;
-
-        // Kirim feedback ke siswa
-        session()->flash('success', "Jawaban tersimpan! Nilai kamu: {$nilai}");
+        session()->flash('success', 'Jawaban berhasil dikirim!');
+        return redirect()->route('soal'); // balik ke list soal
     }
-
 
     public function render()
     {
         return view('livewire.kerjakan-soal', [
-            'quiz' => $this->quiz->load('questions.options'),
+            'quiz' => $this->quiz,
+            'total' => $this->quiz->questions->count(),
+            'currentQuestion' => $this->quiz->questions[$this->currentIndex] ?? null,
         ]);
     }
 }

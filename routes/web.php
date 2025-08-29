@@ -50,6 +50,7 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
 Route::middleware(['auth', 'role:siswa'])->group(function () {
     Route::get('homepage-student', HomepageStudent::class)->name('homepage-student');
     Route::get('kerjakan/{quiz}', KerjakanSoal::class)->name('kerjakan-soal');
+    Route::get('/review-soal/{quiz}', ShowSoal::class)->name('detail-soal-siswa');
 });
 
 Route::middleware(['auth', 'role:instruktur'])->group(function () {

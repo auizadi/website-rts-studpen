@@ -36,7 +36,7 @@
         </div>
 
         {{-- right sidebar --}}
-        <livewire:right-sidebar>
+        <livewire:right-sidebar />
 
 
     </div>

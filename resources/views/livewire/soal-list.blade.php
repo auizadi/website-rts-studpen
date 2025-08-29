@@ -1,9 +1,16 @@
 <div>
     {{-- The whole world belongs to you. --}}
     @role('instruktur')
+        @if (session('success'))
+            <div x-data="{ show: true }" x-init="setTimeout(() => show = false, 4000)" x-show="show" x-transition
+                class="mb-4 p-3 text-sm text-green-700 bg-green-100 rounded-lg" role="alert">
+                {{ session('success') }}
+            </div>
+        @endif
+        {{-- card --}}
         <div class="flex flex-col p-3 gap-3">
             @forelse ($quizzes as $quiz)
-                <a href="{{ route('buat-soal', $quiz->id) }}"
+                <a href="{{ $quiz->is_published ? route('detail-soal', $quiz->id) : route('buat-soal', $quiz->id) }}"
                     class="block transition delay-150 duration-300 ease-in-out hover:scale-105 " wire:navigate>
                     <div class="p-4 bg-white shadow-md rounded-lg">
                         <div class="flex flex-row justify-between items-center">
@@ -29,22 +36,37 @@
             @endforelse
         </div>
         @elserole('siswa')
-        @forelse ($quizzes as $quiz)
-            <div class="p-4 bg-white shadow-md rounded-lg">
-                <div class="flex flex-row justify-between items-center">
-                    <div>
-                        <h2 class="text-lg font-semibold">{{ $quiz->nama_soal }}</h2>
-                        <p class="text-gray-400 text-sm">Jumlah Soal: {{ $quiz->questions->count() }}</p>
+        <div class="flex flex-col p-3 gap-3">
+            @forelse ($quizzes as $quiz)
+                <div class="p-4 bg-white shadow-md rounded-lg">
+                    <div class="flex flex-row justify-between items-center">
+                        <div>
+                            <h2 class="text-lg font-semibold">{{ $quiz->nama_soal }}</h2>
+                            <p class="text-gray-400 text-sm">Jumlah Soal: {{ $quiz->questions->count() }}</p>
+                        </div>
+                        @if ($quiz->answers()->where('user_id', auth()->id())->exists())
+                            <a href="{{ route('detail-soal-siswa', $quiz->id) }}"
+                                class="font-semibold text-blue-500 hover:text-blue-700" wire:navigate>
+                                Lihat Hasil
+                            </a>
+                        @else
+                            <a href="{{ route('kerjakan-soal', $quiz->id) }}"
+                                class="bg-blue-500 text-white font-semibold rounded-full px-2 py-1 text-sm hover:bg-blue-700"
+                                wire:navigate>
+                                Kerjakan
+                            </a>
+                        @endif
+
+
+
+
                     </div>
-                    <a href="{{ route('kerjakan-soal', $quiz->id) }}" class="text-blue-500 hover:text-blue-700"
-                        wire:navigate>
-                        Kerjakan
-                    </a>
                 </div>
-            </div>
-        @empty
-            <p class="text-gray-500 text-center col-span-3">Soal belum ada</p>
-        @endforelse
+            @empty
+                <p class="text-gray-500 text-center col-span-3">Soal belum ada</p>
+            @endforelse
+
+        </div>
 
     @endrole
     {{-- paginasi --}}

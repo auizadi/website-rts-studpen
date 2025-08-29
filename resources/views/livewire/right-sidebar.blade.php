@@ -16,11 +16,21 @@
             </div>
 
             {{-- card bawah --}}
-                <div class="p-5 rounded-lg bg-blue-300 ">
+            @role('siswa')
+                {{-- kalau bukan halaman kerjakan soal --}}
+                <div class="p-5 rounded-lg bg-blue-300">
                     <p class="text-white text-lg font-semibold">Jangan Lewatkan</p>
-                    <p class="text-white ">Ada promo & penawaran menarik khusus untuk kamu, yuk segera cek sekarang
-                        juga.</p>
+                    <p class="text-white">Ada promo & penawaran menarik khusus untuk kamu, yuk segera cek sekarang juga.
+                    </p>
                 </div>
+
+                @elserole('instruktur')
+                <div class="p-5 rounded-lg bg-yellow-300">
+                    <p class="text-gray-800 font-semibold">Halo Instruktur</p>
+                    <p class="text-gray-700">Gunakan menu untuk kelola soal & nilai siswa.</p>
+                </div>
+            @endrole
+
         </div>
     </div>
 </div>

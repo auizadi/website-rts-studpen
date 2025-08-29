@@ -2,11 +2,22 @@
     {{-- In work, do what you enjoy. --}}
     <div x-data x-init="initFlowbite()" class="">
         <div class="bg-white p-3 rounded-lg shadow-lg flex flex-col h-96 w-56 overflow-y-auto space-y-4">
-            <a href=""
-                class="hover:bg-blue-400 p-2 flex hover:text-white flex-row gap-2 items-center rounded-full">
-                <i class="fa-solid fa-clipboard p-2 rounded-full text-white bg-blue-500"></i>
-                Simulasi
-            </a>
+            @role('instruktur')
+                <a href="{{ route('beranda-instruktur') }}"
+                    class="{{ request()->routeIs('beranda-instruktur') ? 'bg-blue-400 p-2 flex text-white flex-row gap-2 items-center rounded-full' : 'hover:bg-blue-400 p-2 flex hover:text-white flex-row gap-2 items-center rounded-full' }}"
+                    wire:navigate>
+                    <div class="p-2 rounded-full bg-blue-500">
+                        <i class="fa-solid fa-house-user text-white"></i>
+                    </div>
+                    Dashboard
+                </a>
+                @elserole('siswa')
+                <a href="{{ route('homepage-student') }}"
+                    class="{{ request()->routeIs('homepage-student') ? 'bg-blue-400 p-2 flex text-white flex-row gap-2 items-center rounded-full' : 'hover:bg-blue-400 p-2 flex hover:text-white flex-row gap-2 items-center rounded-full' }} " wire:navigate>
+                    <i class="fa-solid fa-clipboard p-2 rounded-full text-white bg-blue-500"></i>
+                    Dashboard
+                </a>
+            @endrole
             @role('instruktur')
                 <a href="{{ route('soal') }}"
                     class="{{ request()->routeIs('soal') ? ' bg-blue-400 p-2 flex text-white flex-row gap-2 items-center rounded-full' : 'hover:bg-blue-400 p-2 flex hover:text-white flex-row gap-2 items-center rounded-full' }} "
@@ -23,11 +34,20 @@
                 </a>
             @endrole
 
-            <a href=""
-                class="hover:bg-blue-400 p-2 flex hover:text-white flex-row gap-2 items-center rounded-full">
-                <i class="fa-solid fa-book-open-reader p-2 rounded-full text-white bg-blue-500"></i>
-                Materi
-            </a>
+            @role('instruktur')
+                <a href=""
+                    class="hover:bg-blue-400 p-2 flex hover:text-white flex-row gap-2 items-center rounded-full">
+                    <i class="fa-solid fa-book-open-reader p-2 rounded-full text-white bg-blue-500"></i>
+                    Tambah Materi
+                </a>
+                @elserole('siswa')
+                <a href=""
+                    class="hover:bg-blue-400 p-2 flex hover:text-white flex-row gap-2 items-center rounded-full">
+                    <i class="fa-solid fa-book-open-reader p-2 rounded-full text-white bg-blue-500"></i>
+                    Materi
+                </a>
+            @endrole
+
             <a href=""
                 class="hover:bg-blue-400 p-2 flex hover:text-white flex-row gap-2 items-center rounded-full">
                 <i class="fa-solid fa-tv p-2 rounded-full text-white bg-blue-500"></i>

@@ -24,14 +24,35 @@ class RoleSeeder extends Seeder
         Role::create(['name' => 'instruktur']);
         Role::create(['name' => 'siswa']);
 
-        // create admin credential
+        // create user credential
         $admin = User::create([
             'name' => 'Admin',
             'email' => 'admin@mail.com',
             'password' => bcrypt('admin1234'),
         ]);
 
-        // assign role to admin
+        $instruktur = User::create([
+            'name' => 'dani',
+            'email' => 'dani@mail.com',
+            'password' => bcrypt('dani1234'),
+        ]);
+
+        $siswa = User::create([
+            'name' => 'andi',
+            'email' => 'andi@mail.com',
+            'password' => bcrypt('andi1234'),
+        ]);
+
+        $siswa2 = User::create([
+            'name' => 'ahmad',
+            'email' => 'ahmad@mail.com',
+            'password' => bcrypt('ahmad1234'),
+        ]);
+
+        // assign role to every user
         $admin->assignRole('admin');
+        $instruktur->assignRole('instruktur');
+        $siswa->assignRole('siswa');
+        $siswa2->assignRole('siswa');
     }
 }

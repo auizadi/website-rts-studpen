@@ -3,6 +3,7 @@
 
 
     <form wire:submit.prevent="save">
+        
         @foreach ($quiz->questions as $index => $q)
             <div class="mb-4 p-4 border rounded-lg">
                 <p class="font-medium">{{$index + 1}}.{{ $q->pertanyaan }}</p>

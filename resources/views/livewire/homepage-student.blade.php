@@ -27,7 +27,6 @@
         </div>
 
         <!-- Slider indicators -->
-        <!-- Slider indicators -->
         <div class="absolute bottom-5 w-full flex justify-center z-30">
             <div class="flex gap-3">
                 @for ($i = 0; $i < 5; $i++)
@@ -65,6 +64,54 @@
             </span>
         </button>
     </div>
+
+    <div class="rounded-md bg-gray-100 p-5 my-5">
+        <div class="flex justify-between items-center mb-3 ">
+            <div class="flex items-center gap-2">
+                <div class="flex items-center justify-center rounded-full w-8 h-8 bg-blue-500 text-white">
+                    <i class="fa-solid fa-clipboard-list "></i>
+                </div>
+                <span class="font-semibold text-xl">Latsol</span>
+            </div>
+            <div>
+                <a href="#" class="text-blue-500 font-semibold hover:text-blue-600">Lihat Semua</a>
+            </div>
+        </div>
+        <p class="italic text-gray-500 text-sm font-thin">Latihan Soal</p>
+
+    </div>
+
+    <div class="rounded-md bg-gray-100 p-5 my-5">
+        <div class="flex justify-between items-center mb-3 ">
+            <div class="flex items-center gap-2">
+                <div class="flex items-center justify-center rounded-full w-8 h-8 bg-blue-500 text-white">
+                    <i class="fa-solid fa-book-open-reader"></i>
+                </div>
+                <span class="font-semibold text-xl">Materi</span>
+            </div>
+            <div>
+                <a href="#" class="text-blue-500 font-semibold hover:text-blue-600">Lihat Semua</a>
+            </div>
+        </div>
+        <p class="italic text-gray-500 text-sm font-thin">Latihan Belajar</p>
+    </div>
+
+    <div class="rounded-md bg-gray-100 p-5 my-5">
+        <div class="flex justify-between items-center mb-3 ">
+            <div class="flex items-center gap-2">
+                <div class="flex items-center justify-center rounded-full w-8 h-8 bg-blue-500 text-white">
+                    <i class="fa-solid fa-tv "></i>
+                </div>
+                <span class="font-semibold  text-xl">Liveclass</span>
+            </div>
+            <div>
+                <a href="#" class="text-blue-500 font-semibold hover:text-blue-600">Lihat Semua</a>
+            </div>
+        </div>
+        <p class="italic text-sm text-gray-500 font-thin">Liveclass</p>
+
+    </div>
+
 
 
 

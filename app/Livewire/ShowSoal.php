@@ -10,9 +10,19 @@ use Livewire\Component;
 
 class ShowSoal extends Component
 {
+
     public $quiz;
     public $answers = [];
     public $score = null;
+    public $page = 1;
+    public $perPage = 5;
+
+    // state edit
+    public $editMode = false;
+    public $editQuestionId;
+    public $pertanyaan;
+    public $opsi = [];
+    public $benar;
 
     public function mount(Quizzes $quiz)
     {
@@ -36,6 +46,63 @@ class ShowSoal extends Component
         }
     }
 
+    public function edit($id)
+    {
+        $question = Questions::with('options')->findOrFail($id);
+        $this->editMode = true;
+        $this->editQuestionId = $id;
+        $this->pertanyaan = $question->pertanyaan;
+        $this->opsi = $question->options->pluck('teks')->toArray();
+        $this->benar = $question->options->search(fn($opt) => $opt->is_correct);
+    }
+
+    // update data
+    public function update()
+    {
+        $this->validate([
+            'pertanyaan' => 'required|string',
+            'opsi.*'     => 'required|string',
+            'benar'      => 'required|integer|min:0|max:3',
+        ]);
+
+        $question = Questions::findOrFail($this->editQuestionId);
+        $question->update(['pertanyaan' => $this->pertanyaan]);
+
+        // update opsi
+        foreach ($question->options as $i => $opt) {
+            $opt->update([
+                'teks' => $this->opsi[$i],
+                'is_correct' => ($this->benar == $i),
+            ]);
+        }
+
+        $this->reset(['editMode', 'editQuestionId', 'pertanyaan', 'opsi', 'benar']);
+        $this->quiz->load('questions.options');
+
+        session()->flash('success', 'Soal berhasil diperbarui!');
+    }
+
+    public function cancelEdit()
+    {
+        $this->reset(['editMode', 'editQuestionId', 'pertanyaan', 'opsi', 'benar']);
+    }
+
+    public function delete($id)
+    {
+        $question = Questions::findOrFail($id);
+
+        // hapus opsi jawaban dulu
+        $question->options()->delete();
+
+        // hapus pertanyaan
+        $question->delete();
+
+        session()->flash('success', 'Pertanyaan berhasil dihapus!');
+
+        // refresh relasi supaya tampilan update
+        $this->quiz->load('questions.options');
+    }
+
     public function publish()
     {
         $this->quiz->update(['is_published' => true]);
@@ -44,8 +111,26 @@ class ShowSoal extends Component
         return redirect()->route('soal');
     }
 
+    public function nextPage()
+    {
+        if ($this->page * $this->perPage < $this->quiz->questions->count()) {
+            $this->page++;
+        }
+    }
+
+    public function prevPage()
+    {
+        if ($this->page > 1) {
+            $this->page--;
+        }
+    }
     public function render()
     {
-        return view('livewire.show-soal');
+        $questions = $this->quiz->questions
+            ->slice(($this->page - 1) * $this->perPage, $this->perPage)
+            ->values(); // ambil soal per halaman
+        // hitung total halaman
+        $totalPages = (int) ceil($this->quiz->questions->count() / $this->perPage);
+        return view('livewire.show-soal', compact('questions', 'totalPages'));
     }
 }

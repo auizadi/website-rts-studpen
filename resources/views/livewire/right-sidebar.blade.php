@@ -1,6 +1,6 @@
 <div>
     {{-- The Master doesn't talk, he acts. --}}
-    <div class="{{ request()->routeIs('akun') ? 'hidden' : 'block' }}">
+    <div class="{{ request()->routeIs('akun') ? 'hidden md:hidden' : 'hidden md:block' }} fixed right-5 z-10 h-screen">
         <div class="flex flex-col gap-3 w-80">
             {{-- card atas --}}
             <div class="rounded-lg p-3 bg-white flex flex-row gap-5 justify-start items-center">
@@ -17,13 +17,12 @@
 
             {{-- card bawah --}}
             @role('siswa')
-                {{-- kalau bukan halaman kerjakan soal --}}
-                <div class="p-5 rounded-lg bg-blue-300">
-                    <p class="text-white text-lg font-semibold">Jangan Lewatkan</p>
-                    <p class="text-white">Ada promo & penawaran menarik khusus untuk kamu, yuk segera cek sekarang juga.
-                    </p>
-                </div>
 
+                    <div class="p-5 rounded-lg bg-blue-300">
+                        <p class="text-white text-lg font-semibold">Jangan Lewatkan</p>
+                        <p class="text-white">Ada promo & penawaran menarik khusus untuk kamu, yuk segera cek sekarang juga.
+                        </p>
+                    </div>
                 @elserole('instruktur')
                 <div class="p-5 rounded-lg bg-yellow-300">
                     <p class="text-gray-800 font-semibold">Halo Instruktur</p>

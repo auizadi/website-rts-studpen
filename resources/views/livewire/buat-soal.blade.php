@@ -39,8 +39,8 @@
                 <div>
                     <label class="block mb-2 text-sm font-medium">Opsi {{ $i + 1 }}</label>
                     <div class="flex items-center gap-2">
-                        <input type="text" wire:model="opsi.{{ $i }}" class="w-full p-2 border rounded-lg"
-                            placeholder="Masukkan opsi...">
+                        <input type="text" wire:model="opsi.{{ $i }}"
+                            class="w-full p-2 border rounded-lg" placeholder="Masukkan opsi...">
 
                         <!-- radio penanda benar -->
                         <input type="radio" wire:model="benar" value="{{ $i }}"
@@ -55,7 +55,7 @@
 
 
         <button type="submit" class="mt-4 px-5 py-2.5 bg-blue-500 text-white rounded-lg hover:bg-blue-600">
-            Tambah Soal
+         Tambah Soal
         </button>
     </form>
 </div>

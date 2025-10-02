@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Quizzes extends Model
 {
+    // model untuk menamai soal dan mengatur publish soal
     protected $fillable = ['nama_soal', 'is_published'];
 
     public function questions()

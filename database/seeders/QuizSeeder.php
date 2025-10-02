@@ -18,7 +18,7 @@ class QuizSeeder extends Seeder
         // buat quiz
         $quiz = Quizzes::create([
             'nama_soal' => 'Pemrograman Web',
-            'is_published' => true,
+            'is_published' => false,
         ]);
 
         // buat pertanyaan pertama
@@ -36,7 +36,7 @@ class QuizSeeder extends Seeder
         // buat pertanyaan kedua
         $question = Questions::create([
             'quiz_id' => $quiz->id,
-            'pertanyaan' => 'Di bawah ini yang termasuk bframework PHP adalah ?',
+            'pertanyaan' => 'Di bawah ini yang termasuk framework PHP adalah ?',
         ]);
 
         // jawaban

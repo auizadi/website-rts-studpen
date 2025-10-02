@@ -1,4 +1,4 @@
-<nav class="bg-white border-gray-200 dark:bg-gray-900 shadow-xl z-50 shadow-white/5 sticky top-0">
+<nav class="bg-white border-gray-200 dark:bg-gray-900 shadow-xl z-50 shadow-white/5 md:visible invisible  sticky top-0">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-5 p-4">
         <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
             <span
@@ -22,8 +22,8 @@
                         <a href="{{ route('homepage-student') }}"
                             class="{{ request()->routeIs('homepage-student') ? 'bg-blue-500 px-4 py-1 rounded-full text-white' : 'dark:text-white text-black' }}"
                             wire:navigate>Beranda</a>
-                    @endrole
-                    @role('instruktur')
+
+                        @elserole('instruktur')
                         <a href="{{ route('beranda-instruktur') }}"
                             class="{{ request()->routeIs('beranda-instruktur') ? 'bg-blue-500 px-4 py-1 rounded-full text-white' : 'text-gray-300' }}"
                             wire:navigate>Beranda</a>
@@ -47,4 +47,28 @@
             </ul>
         </div>
     </div>
+</nav>
+
+{{-- navbar --}}
+<nav
+    class="flex md:invisible fixed bottom-0 left-0 right-0 h-24 bg-gray-100 dark:bg-gray-800 shadow z-50 items-center justify-around">
+
+    <a href="{{route('homepage-student')}}" class="flex flex-col text-center gap-2">
+        <i class="fa-solid fa-house text-gray-300 active:text-white text-3xl"></i>
+        <span class="text-xs text-gray-300">Beranda</span>
+    </a>
+    <a href="" class="flex flex-col text-center gap-2">
+        <i class="fa-solid fa-calendar-day text-gray-300 active:text-white text-3xl"></i>
+        <span class="text-xs text-gray-300">Aktivitas</span>
+    </a>
+    <a href="" class="flex flex-col text-center gap-2">
+        <i class="fa-solid fa-receipt text-gray-300 active:text-white text-3xl"></i>
+        <span class="text-xs text-gray-300">Pembelian</span>
+    </a>
+    <a href="{{ route('akun') }}"
+        class="flex flex-col text-center gap-2 {{ request()->routeIs('akun') ? 'text-white' : 'text-gray-300' }}" wire:navigate>
+        <i class="fa-solid fa-user text-3xl"></i>
+        <span class="text-xs">Akun</span>
+    </a>
+
 </nav>

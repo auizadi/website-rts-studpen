@@ -79,7 +79,6 @@
                     class="font-semibold ">{{ $quizzes->total() }}</span> Entries
             </span>
             <!-- Buttons -->
-            <!-- Buttons -->
             <div class="inline-flex mt-2">
                 @if ($quizzes->onFirstPage())
                     <span

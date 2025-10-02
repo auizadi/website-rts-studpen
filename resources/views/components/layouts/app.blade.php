@@ -14,28 +14,61 @@
 <body class="dark:bg-gray-900 bg-gray-100 overflow-auto">
     {{-- navbar --}}
     @include('components.navbar')
+    {{-- <div class="flex p-20 fixed top-14 bg-white w-[52%] rounded-lg ml-64 mr-96 z-10">
 
-
-    <div class="flex flex-row justify-between m-5">
+    </div> --}}
+    <div class="flex  m-5">
         {{-- left sidebar --}}
-        <livewire:left-sidebar>
+
+        <livewire:left-sidebar />
+
         {{-- konten utama --}}
-        <div class="mx-5 flex-1 min-h-screen p-5 bg-gray-100 rounded-lg overflow-y-auto">
+
+        <main
+            class="ml-0 mr-0 {{ request()->routeIs('akun') ? 'lg:ml-[15rem] lg:mr-0' : 'lg:ml-[15rem] lg:mr-[21rem]' }} flex-1 max-h-screen p-5 mb-10 bg-gray-100 rounded-lg">
+
             {{-- flash message --}}
             @if (session('welcome'))
-                <div x-data="{ show: true }" x-init="setTimeout(() => show = false, 4000)" x-show="show" x-transition
-                    class="fixed top-4 transform -translate-x-1/2 left-1/2 z-50 bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded text-center max-w-3xl mx-auto mb-6"
-                    role="alert">
-                    <strong class="font-bold">{{ session('welcome') }}</strong>
-                    <br>
-                    <i class="text-xs">Anda login sebagai <b>{{ Auth::user()->getRoleNames()->first() }}</b></i>
+                <div id="alert-3" x-data="{ show: true }" x-init="setTimeout(() => show = false, 4000)" x-show="show" x-transition
+                    role="alert"
+                    class="fixed top-4 left-[55%] -translate-x-1/2 z-50 flex items-center justify-center gap-3 px-6 py-4 rounded-lg shadow-md
+            bg-green-50 text-green-800 dark:bg-gray-800 dark:text-green-400">
+
+                    <!-- Icon -->
+                    <svg class="w-5 h-5 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                        viewBox="0 0 20 20" aria-hidden="true">
+                        <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3
+               1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0
+               1 1 1v4h1a1 1 0 0 1 0 2Z" />
+                    </svg>
+
+                    <!-- Text -->
+                    <div class="text-sm text-center">
+                        <strong class="font-bold">{{ session('welcome') }}</strong>
+                        <div class="text-xs">
+                            Anda login sebagai <b>{{ Auth::user()->getRoleNames()->first() }}</b>
+                        </div>
+                    </div>
+
+                    <!-- Close button -->
+                    <button type="button" @click="show = false" aria-label="Close"
+                        class="ml-auto flex items-center justify-center w-8 h-8 rounded-lg
+                   bg-green-50 text-green-500 hover:bg-green-200 focus:ring-2 focus:ring-green-400
+                   dark:bg-gray-800 dark:text-green-400 dark:hover:bg-gray-700">
+                        <svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14"
+                            aria-hidden="true">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                        </svg>
+                    </button>
                 </div>
             @endif
-            {{ $slot }}
 
-        </div>
+            {{ $slot }}
+        </main>
 
         {{-- right sidebar --}}
+
         <livewire:right-sidebar />
 
 

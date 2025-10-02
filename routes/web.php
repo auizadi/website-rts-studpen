@@ -16,7 +16,7 @@ use App\Livewire\QuestionForm;
 use App\Livewire\QuizPage;
 use App\Livewire\ShowSoal;
 use App\Livewire\Soal;
-
+use App\Livewire\TambahMateri;
 
 Route::get('/', function () {
     return view('landing');
@@ -57,6 +57,7 @@ Route::middleware(['auth', 'role:instruktur'])->group(function () {
     Route::get('/beranda', BerandaInstruktur::class)->name('beranda-instruktur');
     Route::get('/buat-soal/{quiz}', BuatSoal::class)->name('buat-soal');
     Route::get('/detail-soal/{quiz}', ShowSoal::class)->name('detail-soal');
+    Route::get('/tambah-materi', TambahMateri::class)->name('tambah-materi');
 });
 
 

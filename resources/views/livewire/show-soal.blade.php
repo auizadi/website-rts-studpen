@@ -7,7 +7,11 @@
                     {{ session('success') }}
                 </div>
             @endif
+            <a href="{{ route('soal') }}"
+                class="focus:outline-none text-white inline-flex gap-2 justify-between items-center bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
+                wire:navigate><i class="fa-solid fa-delete-left text-white"></i>Kembali</a>
             <div class="flex justify-between items-center mb-5">
+
                 <h2 class="text-lg font-bold mb-3">Detail Soal: {{ $quiz->nama_soal }}</h2>
                 @if ($quiz->questions->count() > 0 && !$quiz->is_published)
                     <button type="button" wire:click='publish'
@@ -94,6 +98,9 @@
             @endif
         </div>
         @elserole('siswa')
+        <a href="{{ route('soal') }}"
+            class="focus:outline-none text-white inline-flex gap-2 justify-between items-center bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
+            wire:navigate><i class="fa-solid fa-delete-left text-white"></i>Kembali</a>
         <h2 class="text-lg font-bold mb-3">Hasil Jawaban: {{ $quiz->nama_soal }}</h2>
 
         <div class="mb-5 p-3 bg-gray-100 rounded">

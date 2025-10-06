@@ -147,10 +147,10 @@
                 mendorong kesuksesan industri dan teknologi Anda.</p>
 
             <a href="#services"
-                class="hidden md:inline-block text-white font-bold px-8 py-3 rounded-full gradient transition duration-300">Jelajahi
+                class="hidden lg:inline-block text-white font-bold px-8 py-3 rounded-full gradient transition duration-300">Jelajahi
                 Layanan
                 Kami</a>
-            <div class="md:hidden block">
+            <div class="lg:hidden block">
                 <x-auth-buttons />
             </div>
 

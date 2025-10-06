@@ -1,170 +1,110 @@
 <div>
-    {{-- In work, do what you enjoy. --}}
-    <div x-data x-init="initFlowbite()" class="fixed left-5 h-screen z-20">
-        <div class="bg-white p-3 hidden rounded-lg shadow-lg lg:flex flex-col h-96 w-56 overflow-y-auto space-y-4">
-            @role('siswa')
-                {{-- Dashboard --}}
-                <a href="{{ route('homepage-student') }}"
-                    class="{{ request()->routeIs('homepage-student') ? 'bg-blue-400 text-white' : 'hover:bg-blue-400 hover:text-white' }}
-        p-2 flex items-center gap-2 rounded-full"
-                    data-tooltip-target="simulasi-bottom" data-tooltip-placement="bottom" wire:navigate>
-                    <i
-                        class="fa-solid fa-clipboard flex items-center justify-center h-8 w-8 rounded-full text-white bg-blue-500"></i>
-                    Simulasi
-                </a>
-                <div id="simulasi-bottom" role="tooltip"
-                    class="absolute z-10 hidden md:inline-block px-3 py-2 text-xs font-medium text-white bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
-                    Simulasi
-                    <div class="tooltip-arrow" data-popper-arrow></div>
-                </div>
-                {{-- Latihan Soal --}}
-                <a href="{{ route('soal') }}"
-                    class="{{ request()->routeIs('soal') ? 'bg-blue-400 text-white' : 'hover:bg-blue-400 hover:text-white' }}
-        p-2 flex items-center gap-2 rounded-full"
-                    data-tooltip-target="latsol-bottom" data-tooltip-placement="bottom" wire:navigate>
-                    <i
-                        class="fa-solid fa-clipboard-list flex items-center justify-center h-8 w-8 rounded-full text-white bg-blue-500"></i>
-                    Latsol
-                </a>
-                <div id="latsol-bottom" role="tooltip"
-                    class="absolute z-10 hidden md:inline-block px-3 py-2 text-xs font-medium text-white bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
-                    Latsol
-                    <div class="tooltip-arrow" data-popper-arrow></div>
-                </div>
+    {{-- Success is as dangerous as failure. --}}
+    {{-- responsive mobile --}}
+    <div class="grid grid-cols-3 my-5 lg:hidden">
+        @role('siswa')
+            {{-- Dashboard --}}
+            <a href="{{ route('homepage-student') }}" class="p-2 flex flex-col items-center gap-2 rounded-full" wire:navigate>
+                <i
+                    class="fa-solid fa-clipboard flex items-center justify-center h-8 w-8 rounded-full text-white bg-blue-500"></i>
+                Simulasi
+            </a>
 
-                {{-- Materi --}}
-                <a href="{{ route('materi-siswa') }}"
-                    class="hover:bg-blue-400 hover:text-white p-2 flex items-center gap-2 rounded-full"
-                    data-tooltip-target="materi-bottom" data-tooltip-placement="bottom">
-                    <i
-                        class="fa-solid fa-book-open-reader flex items-center justify-center h-8 w-8 rounded-full text-white bg-blue-500"></i>
-                    Materi
-                </a>
-                <div id="materi-bottom" role="tooltip"
-                    class="absolute z-10 hidden md:inline-block px-3 py-2 text-xs font-medium text-white bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
-                    Materi
-                    <div class="tooltip-arrow" data-popper-arrow></div>
-                </div>
-                {{-- Liveclass --}}
-                <a href="#" class="hover:bg-blue-400 hover:text-white p-2 flex items-center gap-2 rounded-full"
-                    data-tooltip-target="liveclass-bottom" data-tooltip-placement="bottom" wire:navigate>
-                    <i
-                        class="fa-solid fa-tv flex items-center justify-center h-8 w-8 rounded-full text-white bg-blue-500"></i>
-                    Liveclass
-                </a>
-                <div id="liveclass-bottom" role="tooltip"
-                    class="absolute z-10 hidden md:inline-block px-3 py-2 text-xs font-medium text-white bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
-                    Liveclass
-                    <div class="tooltip-arrow" data-popper-arrow></div>
-                </div>
-                {{-- Kalender --}}
-                <a href="#" class="hover:bg-blue-400 hover:text-white p-2 flex items-center gap-2 rounded-full"
-                    data-tooltip-target="kalender-bottom" data-tooltip-placement="bottom" wire:navigate>
-                    <i
-                        class="fa-solid fa-calendar flex items-center justify-center h-8 w-8 rounded-full text-white bg-blue-300"></i>
-                    Kalender
-                </a>
-                <div id="kalender-bottom" role="tooltip"
-                    class="absolute z-10 hidden md:inline-block px-3 py-2 text-xs font-medium text-white bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
-                    Kalender
-                    <div class="tooltip-arrow" data-popper-arrow></div>
-                </div>
-                {{-- Join Grup --}}
-                <button type="button" data-modal-target="modal-join" data-modal-toggle="modal-join"
-                    class="hover:bg-blue-400 hover:text-white p-2 flex items-center gap-2 rounded-full"
-                    data-tooltip-target="join-bottom" data-tooltip-placement="bottom" wire:navigate>
-                    <i
-                        class="fa-solid fa-users flex items-center justify-center h-10 w-10 rounded-full text-white bg-blue-300"></i>
-                    Join Grup Gratis Belajar...
-                </button>
-                <div id="join-bottom" role="tooltip"
-                    class="absolute z-10 hidden md:inline-block px-3 py-2 text-xs font-medium text-white bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
-                    Join Grup Gratis Belajar CPNS 2025
-                    <div class="tooltip-arrow" data-popper-arrow></div>
-                </div>
-                {{-- Konsultan Promo --}}
-                <button type="button" data-modal-target="modal-promo" data-modal-toggle="modal-promo"
-                    class="hover:bg-blue-400 hover:text-white p-2 flex items-center gap-2 rounded-full"
-                    data-tooltip-target="promo-bottom" data-tooltip-placement="bottom" wire:navigate>
-                    <i
-                        class="fa-solid fa-percent flex items-center justify-center h-8 w-8 rounded-full text-white bg-blue-300"></i>
-                    Konsultan Promo
-                </button>
-                <div id="promo-bottom" role="tooltip"
-                    class="absolute z-10 hidden md:inline-block px-3 py-2 text-xs font-medium text-white bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
-                    Konsultan Promo
-                    <div class="tooltip-arrow" data-popper-arrow></div>
-                </div>
-                {{-- Konsultan Masalah --}}
-                <button type="button" data-modal-target="modal-masalah" data-modal-toggle="modal-masalah"
-                    class="hover:bg-blue-400 hover:text-white p-2 flex items-center gap-2 rounded-full"
-                    data-tooltip-target="masalah-bottom" data-tooltip-placement="bottom" wire:navigate>
-                    <i
-                        class="fa-solid fa-circle-xmark flex items-center justify-center h-8 w-8 rounded-full text-white bg-blue-300"></i>
-                    Konsultan Masalah
-                </button>
-                <div id="masalah-bottom" role="tooltip"
-                    class="absolute z-10 hidden md:inline-block px-3 py-2 text-xs font-medium text-white bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
-                    Konsultan Masalah
-                    <div class="tooltip-arrow" data-popper-arrow></div>
-                </div>
-                @elserole('instruktur')
-                {{-- simulasi --}}
-                <a href="{{ route('beranda-instruktur') }}"
-                    class="{{ request()->routeIs('beranda-instruktur') ? 'bg-blue-400 p-2 flex text-white flex-row gap-2 items-center rounded-full' : 'hover:bg-blue-400 p-2 flex hover:text-white flex-row gap-2 items-center rounded-full' }}"
-                    wire:navigate data-tooltip-target="dashboard-bottom" data-tooltip-placement="bottom">
-                    <i
-                        class="fa-solid fa-clipboard flex items-center justify-center h-8 w-8 rounded-full text-white bg-blue-500"></i>
-                    Dashboard
-                </a>
-                <div id="dashboard-bottom" role="tooltip"
-                    class="absolute z-10 hidden md:inline-block px-3 py-2 text-xs font-medium text-white bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
-                    Dashboard
-                    <div class="tooltip-arrow" data-popper-arrow></div>
-                </div>
+            {{-- Latihan Soal --}}
+            <a href="{{ route('soal') }}"
+                class="{{ request()->routeIs('soal') }} p-2 flex flex-col items-center gap-2 rounded-full" wire:navigate>
+                <i
+                    class="fa-solid fa-clipboard-list flex items-center justify-center h-8 w-8 rounded-full text-white bg-blue-500"></i>
+                Latsol
+            </a>
 
-                {{-- tambah soal --}}
-                <a href="{{ route('soal') }}"
-                    class="{{ request()->routeIs('soal') ? ' bg-blue-400 p-2 flex text-white flex-row gap-2 items-center rounded-full' : 'hover:bg-blue-400 p-2 flex hover:text-white flex-row gap-2 items-center rounded-full' }} "
-                    data-tooltip-target="soal-bottom" data-tooltip-placement="bottom" wire:navigate>
-                    <i class="fa-solid fa-clipboard-list p-2 rounded-full h-8 w-8 text-center text-white bg-blue-500"></i>
-                    Tambah Soal
-                </a>
-                <div id="soal-bottom" role="tooltip"
-                    class="absolute z-10 hidden md:inline-block px-3 py-2 text-xs font-medium text-white bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
-                    Tambah Soal
-                    <div class="tooltip-arrow" data-popper-arrow></div>
-                </div>
+            {{-- Materi --}}
+            <a href="{{ route('materi-siswa') }}" class=" p-2 flex flex-col items-center gap-2 rounded-full">
+                <i
+                    class="fa-solid fa-book-open-reader flex items-center justify-center h-8 w-8 rounded-full text-white bg-blue-500"></i>
+                Materi
+            </a>
 
-                {{-- tambah materi --}}
-                <a href="{{ route('tambah-materi') }}" wire:navigate
-                    class="hover:bg-blue-400 p-2 flex hover:text-white flex-row gap-2 items-center rounded-full"
-                    data-tooltip-target="materi-bottom" data-tooltip-placement="bottom" wire:navigate>
-                    <i
-                        class="fa-solid fa-book-open-reader p-2 rounded-full h-8 w-8 text-center text-white bg-blue-500"></i>
-                    Tambah Materi
-                </a>
-                <div id="materi-bottom" role="tooltip"
-                    class="absolute z-10 hidden md:inline-block px-3 py-2 text-xs font-medium text-white bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
-                    Tambah Materi
-                    <div class="tooltip-arrow" data-popper-arrow></div>
-                </div>
-            @endrole
-        </div>
+            {{-- Liveclass --}}
+            <a href="#" class=" p-2 flex flex-col items-center gap-2 rounded-full" wire:navigate>
+                <i class="fa-solid fa-tv flex items-center justify-center h-8 w-8 rounded-full text-white bg-blue-500"></i>
+                Liveclass
+            </a>
 
+            {{-- Kalender --}}
+            <a href="#" class=" p-2 flex flex-col items-center gap-2 rounded-full" wire:navigate>
+                <i
+                    class="fa-solid fa-calendar flex items-center justify-center h-8 w-8 rounded-full text-white bg-blue-300"></i>
+                Kalender
+            </a>
 
-        {{-- modal logout --}}
-        <div class="bg-white p-3 rounded-lg mt-5 lg:block hidden">
+            {{-- Join Grup --}}
+            <button type="button" data-modal-target="modal-join" data-modal-toggle="modal-join"
+                class=" p-2 flex flex-col items-center gap-2 rounded-full" wire:navigate>
+                <i
+                    class="fa-solid fa-users flex items-center justify-center h-10 w-10 rounded-full text-white bg-blue-300"></i>
+                Join Grup
+            </button>
+
+            {{-- Konsultan Promo --}}
+            <button type="button" data-modal-target="modal-promo" data-modal-toggle="modal-promo"
+                class=" p-2 flex flex-col items-center gap-2 rounded-full" wire:navigate>
+                <i
+                    class="fa-solid fa-percent flex items-center justify-center h-8 w-8 rounded-full text-white bg-blue-300"></i>
+                Konsultan Promo
+            </button>
+
+            {{-- Konsultan Masalah --}}
+            <button type="button" data-modal-target="modal-masalah" data-modal-toggle="modal-masalah"
+                class=" p-2 flex flex-col items-center gap-2 rounded-full" wire:navigate>
+                <i
+                    class="fa-solid fa-circle-xmark flex items-center justify-center h-8 w-8 rounded-full text-white bg-blue-300"></i>
+                Konsultan Masalah
+            </button>
+
+            {{-- logout --}}
             <!-- Tombol Trigger Modal -->
             <button type="button" data-modal-target="logout-modal" data-modal-toggle="logout-modal"
-                class="bg-red-500 hover:bg-red-600 p-2 flex text-white flex-row gap-2 rounded-lg w-full items-center justify-center">
-                <i class="fa-solid fa-right-from-bracket p-2 rounded-full text-white"></i>
-                <span class="text-white font-semibold">Keluar</span>
+                class="p-2 flex flex-col items-center gap-2 rounded-full">
+                <i
+                    class="fa-solid fa-right-from-bracket p-2 bg-red-300 flex flex-col items-center justify-center h-8 w-8 rounded-full text-white"></i>
+                Keluar
             </button>
-        </div>
 
+            @elserole('instruktur')
+            {{-- simulasi --}}
+            <a href="{{ route('beranda-instruktur') }}"
+                class="{{ request()->routeIs('beranda-instruktur') }} p-2 flex flex-col items-center gap-2 rounded-full"
+                wire:navigate>
+                <i
+                    class="fa-solid fa-clipboard flex items-center justify-center h-8 w-8 rounded-full text-white bg-blue-500"></i>
+                Dashboard
+            </a>
 
+            {{-- tambah soal --}}
+            <a href="{{ route('soal') }}"
+                class="{{ request()->routeIs('soal') }} p-2 flex flex-col items-center gap-2 rounded-full" wire:navigate>
+                <i class="fa-solid fa-clipboard-list p-2 rounded-full h-8 w-8 text-center text-white bg-blue-500"></i>
+                Tambah Soal
+            </a>
+
+            {{-- tambah materi --}}
+            <a href="{{ route('tambah-materi') }}" class="p-2 flex flex-col text-center items-center gap-2 rounded-full"
+                wire:navigate>
+                <i class="fa-solid fa-book-open-reader p-2 rounded-full h-8 w-8 text-center text-white bg-blue-500"></i>
+                Tambah Materi
+            </a>
+            {{-- logout --}}
+            <!-- Tombol Trigger Modal -->
+            <button type="button" data-modal-target="logout-modal" data-modal-toggle="logout-modal"
+                class="p-2 flex flex-col items-center gap-2 rounded-full">
+                <i
+                    class="fa-solid fa-right-from-bracket p-2 bg-red-300 flex flex-col items-center justify-center h-8 w-8 rounded-full text-white"></i>
+                Keluar
+            </button>
+        @endrole
     </div>
+
     <!-- Modal Konfirmasi Logout -->
     <div id="logout-modal" tabindex="-1"
         class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-[9999] justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">

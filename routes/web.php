@@ -14,9 +14,13 @@ use App\Livewire\KerjakanSoal;
 use App\Livewire\LearningSystem;
 use App\Livewire\QuestionForm;
 use App\Livewire\QuizPage;
+use App\Livewire\ShowMateri;
 use App\Livewire\ShowSoal;
 use App\Livewire\Soal;
 use App\Livewire\TambahMateri;
+use App\Models\Materi;
+use Illuminate\Support\Facades\Response;
+
 
 Route::get('/', function () {
     return view('landing');
@@ -51,6 +55,17 @@ Route::middleware(['auth', 'role:siswa'])->group(function () {
     Route::get('homepage-student', HomepageStudent::class)->name('homepage-student');
     Route::get('kerjakan/{quiz}', KerjakanSoal::class)->name('kerjakan-soal');
     Route::get('/review-soal/{quiz}', ShowSoal::class)->name('detail-soal-siswa');
+    Route::get('materi-siswa', ShowMateri::class)->name('materi-siswa');
+    // preview materi
+    Route::get('materi-siswa/view/{id}', function ($id) {
+        $materi = Materi::findOrFail($id);
+        $path = storage_path('app/public/' . $materi->file_path);
+
+        return response()->file($path, [
+            'Content-Type' => 'application/pdf',
+            'Content-Disposition' => 'inline; filename="' . $materi->file_name . '"'
+        ]);
+    })->name('materi-view');
 });
 
 Route::middleware(['auth', 'role:instruktur'])->group(function () {

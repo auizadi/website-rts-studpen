@@ -15,4 +15,6 @@
         </div>
     </div>
 
+    <livewire:menu-mobile />
+
 </div>

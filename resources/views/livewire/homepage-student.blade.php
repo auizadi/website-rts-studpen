@@ -65,6 +65,8 @@
         </button>
     </div>
 
+    <livewire:menu-mobile />
+
     <div class="rounded-md bg-gray-100 p-5 my-5">
         <div class="flex justify-between items-center mb-3 ">
             <div class="flex items-center gap-2">

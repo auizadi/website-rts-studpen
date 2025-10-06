@@ -56,18 +56,12 @@
                                 Kerjakan
                             </a>
                         @endif
-
-
-
-
                     </div>
                 </div>
             @empty
                 <p class="text-gray-500 text-center col-span-3">Soal belum ada</p>
             @endforelse
-
         </div>
-
     @endrole
     {{-- paginasi --}}
     @if ($quizzes->hasPages())

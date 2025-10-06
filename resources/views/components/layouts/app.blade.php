@@ -25,14 +25,13 @@
         {{-- konten utama --}}
 
         <main
-            class="ml-0 mr-0 {{ request()->routeIs('akun') ? 'lg:ml-[15rem] lg:mr-0' : 'lg:ml-[15rem] lg:mr-[21rem]' }} flex-1 max-h-screen p-5 mb-10 bg-gray-100 rounded-lg">
+            class="ml-0 mr-0 {{ request()->routeIs('akun') ? 'lg:ml-[15rem] lg:mr-0' : 'lg:ml-[15rem] lg:mr-[21rem]' }} flex-1 min-h-screen pb-20 p-5 mb-10 bg-gray-200 rounded-lg">
 
             {{-- flash message --}}
             @if (session('welcome'))
                 <div id="alert-3" x-data="{ show: true }" x-init="setTimeout(() => show = false, 4000)" x-show="show" x-transition
                     role="alert"
-                    class="fixed top-4 left-[55%] -translate-x-1/2 z-50 flex items-center justify-center gap-3 px-6 py-4 rounded-lg shadow-md
-            bg-green-50 text-green-800 dark:bg-gray-800 dark:text-green-400">
+                    class="fixed z-50 flex items-center gap-3 px-4 py-3 rounded-lg shadow-md bg-green-50 text-green-800 dark:bg-gray-800 dark:text-green-400 top-4 left-4 right-4 sm:left-1/2 sm:-translate-x-1/2 sm:right-auto sm:w-auto sm:max-w-md lg:max-w-lg transition-all duration-300">
 
                     <!-- Icon -->
                     <svg class="w-5 h-5 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="currentColor"

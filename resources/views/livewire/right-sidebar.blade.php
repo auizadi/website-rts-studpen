@@ -1,6 +1,6 @@
 <div>
     {{-- The Master doesn't talk, he acts. --}}
-    <div class="{{ request()->routeIs('akun') ? 'hidden md:hidden' : 'hidden md:block' }} fixed right-5 z-10 h-screen">
+    <div class="{{ request()->routeIs('akun') ? 'hidden lg:hidden' : 'hidden lg:block' }} fixed right-5 z-10 h-screen">
         <div class="flex flex-col gap-3 w-80">
             {{-- card atas --}}
             <div class="rounded-lg p-3 bg-white flex flex-row gap-5 justify-start items-center">

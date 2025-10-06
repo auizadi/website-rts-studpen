@@ -118,3 +118,11 @@ php artisan serve
 ### 14. Tampilan menu soal
 ![tampilan pesan](/assets/soal.png "tampilan pesan")
 <br>
+
+### 15. Tampilan fitur Tambah Materi (Admin)
+![tampilan tambah materi (admin)](/assets/tambahMateri-Admin.png "tampilan tambah materi (admin)")
+<br>
+
+### 16. Tampilan fitur Materi (siswa)
+![tampilan tambah materi (siswa)](/assets/materiSiswa.png "tampilan tambah materi (siswa) )")
+<br>

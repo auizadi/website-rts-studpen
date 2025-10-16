@@ -356,7 +356,7 @@
                             'skills' => ['Front-end Development: HTML, CSS, JavaScript, React.js, Vue.js, Angular', 'Back-end Development: Node.js, Python (Django/Flask), Java (Spring Boot), Go', 'Mobile App Development: Android (Kotlin/Java), iOS (Swift), Flutter, React Native', 'Fundamental Kuat: Struktur Data, Algoritma, Design Patterns', 'Praktik Terbaik: Git, Testing, Debugging, CI/CD'],
                             'projects' => 'Membangun fitur baru untuk aplikasi perusahaan, mengoptimalkan kode, atau bahkan mengembangkan MVP (Minimum Viable Product) untuk sebuah startup.',
                         ],
-                        'loginRoute' => route('login'),
+                        'loginRoute' => route('register'),
                     ])
 
                     <!-- Card 2 -->
@@ -369,7 +369,7 @@
                             'skills' => ['Pemrograman PLC: Logika ladder, function block diagram (FBD), structured text (ST) pada merek ternama seperti Siemens, Allen-Bradley, atau Omron.', 'BSistem Kontrol: SCADA (Supervisory Control and Data Acquisition) dan HMI (Human-Machine Interface) untuk memantau dan mengontrol proses.', 'Robotika: Dasar-dasar pemrograman dan integrasi robot industri.', 'Integrasi Sistem: Menghubungkan sensor, actuator, dan berbagai perangkat ke dalam satu sistem yang kohesif.', 'Pemecahan Masalah: Mendiagnosis dan memecahkan kendala pada sistem otomasi yang kompleks.'],
                             'projects' => 'Merancang sistem kontrol untuk conveyor belt, memprogram urutan kerja robot, atau mengembangkan panel HMI untuk memantau efisiensi produksi.',
                         ],
-                        'loginRoute' => route('login'),
+                        'loginRoute' => route('register'),
                     ])
 
                     <!-- Card 3 -->
@@ -382,7 +382,7 @@
                             'skills' => ['Embedded Systems: Pemrograman mikrokontroler (C/C++) dan komputer mikro (Python pada Raspberry Pi).', 'Jaringan & Komunikasi: Protokol IoT seperti MQTT, HTTP, LoRaWAN, dan Bluetooth Low Energy (BLE).', 'Platform Cloud IoT: Menggunakan AWS IoT, Google Cloud IoT Core, atau Azure IoT Hub untuk manajemen device dan data.', 'Analisis Data: Memproses dan menganalisis aliran data sensor secara real-time.', 'Aplikasi & Visualisasi: Membangun dashboard untuk memvisualisasikan data dan memberikan insight yang dapat ditindaklanjuti.'],
                             'projects' => ' Membangun sistem smart farming untuk memantau kelembaban tanah, prototype smart home device, atau sistem tracking aset berbasis IoT.',
                         ],
-                        'loginRoute' => route('login'),
+                        'loginRoute' => route('register'),
                     ])
 
                     <!-- Card 4 -->
@@ -395,7 +395,7 @@
                             'skills' => ['Game Engine: Pengembangan menggunakan Unity3D (dengan C#) atau Unreal Engine (dengan Blueprints/C++) sebagai fondasi utama.', 'Pemrograman AR/VR: Bekerja dengan SDK seperti ARCore (Google), ARKit (Apple), dan Oculus SDK.', 'Desain Interaksi: Merancang interaksi yang intuitif dan nyaman dalam lingkungan 3D (Spatial Design).', '3D Modeling & Asset: Dasar-dasar membuat dan mengoptimalkan aset 3D untuk real-time rendering.', 'Aplikasi Untuk: Simulasi pelatihan, visualisasi produk, edukasi interaktif, dan pengalaman marketing yang unik.'],
                             'projects' => 'Mengembangkan aplikasi AR untuk menampilkan produk furniture di ruanganmu, simulator VR untuk pelatihan medis, atau filter efek wajah AR untuk media sosial.',
                         ],
-                        'loginRoute' => route('login'),
+                        'loginRoute' => route('register'),
                     ])
 
                     <!-- Card 5 -->
@@ -408,7 +408,7 @@
                             'skills' => ['Metodologi Penelitian: Merancang hipotesis, melakukan eksperimen yang terkontrol, dan menganalisis hasil.', 'Pemikiran Kritis & Kreatif: Memecahkan masalah yang belum memiliki solusi jelas dan "thinking outside the box".', 'Rapid Prototyping: Membangun prototype cepat untuk menguji validitas sebuah ide.', 'Analisis Teknis: Menilai kelayakan teknis dan potensi dari sebuah teknologi baru.', 'Komunikasi Ilmiah: Mendokumentasikan temuan dan mempresentasikan hasil penelitian secara jelas'],
                             'projects' => 'Meneliti material baru untuk elektronik, mengembangkan algoritma baru untuk optimasi, atau mengeksplorasi penerapan komputasi kuantum dalam suatu bidang.',
                         ],
-                        'loginRoute' => route('login'),
+                        'loginRoute' => route('register'),
                     ])
 
                     <!-- Card 6 -->
@@ -421,7 +421,7 @@
                             'skills' => ['Pemrograman & Analisis Data: Menguasai Python (Pandas, NumPy, Scikit-learn) dan R untuk memanipulasi dan menganalisis dataset besar.', 'Machine Learning & Deep Learning: Membangun model untuk klasifikasi, regresi, clustering, serta Neural Networks untuk pemrosesan gambar dan teks (menggunakan TensorFlow atau PyTorch).', 'Pemrosesan Bahasa Alami (NLP): Menganalisis dan membuat model yang memahami bahasa manusia.', 'Visualisasi Data: Menggunakan tools seperti Tableau, Power BI, dan library Python (Matplotlib, Seaborn) untuk membuat dashboard yang informatif.', 'Big Data Tools: Pengenalan pada ekosistem big data seperti Hadoop dan Spark.'],
                             'projects' => 'Membangun model untuk memprediksi churn pelanggan, sistem rekomendasi produk, analisis sentimen dari media sosial, atau model computer vision untuk inspeksi kualitas otomatis.',
                         ],
-                        'loginRoute' => route('login'),
+                        'loginRoute' => route('register'),
                     ])
 
                 </div>

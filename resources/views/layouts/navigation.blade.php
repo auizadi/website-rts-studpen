@@ -20,8 +20,11 @@
                             <x-nav-link :href="route('instruktur.index')" :active="request()->routeIs('instruktur.index')">
                                 {{ __('Dashboard') }}
                             </x-nav-link>
+                            <x-nav-link :href="route('pendaftaran')" :active="request()->routeIs('pendaftaran')">
+                                {{ __('Pendaftaran') }}
+                            </x-nav-link>
                             <x-nav-link :href="route('instruktur.create')" :active="request()->routeIs('instruktur.create')">
-                                {{ __('Buat Akun') }}
+                                {{ __('Buat Akun Instruktur') }}
                             </x-nav-link>
                             <x-nav-link :href="route('pesan.index')" :active="request()->routeIs('pesan.index')">
                                 {{ __('Pesan Pengguna') }}
@@ -88,8 +91,11 @@
                 <x-responsive-nav-link :href="route('instruktur.index')" :active="request()->routeIs('instruktur.index')">
                     {{ __('Dashboard') }}
                 </x-responsive-nav-link>
+                <x-responsive-nav-link :href="route('pendaftaran')" :active="request()->routeIs('pendaftaran')">
+                    {{ __('Pendaftaran') }}
+                </x-responsive-nav-link>
                 <x-responsive-nav-link :href="route('instruktur.create')" :active="request()->routeIs('instruktur.create')">
-                    {{ __('Buat Akun') }}
+                    {{ __('Buat Akun Instruktur') }}
                 </x-responsive-nav-link>
                 <x-responsive-nav-link :href="route('pesan.index')" :active="request()->routeIs('pesan.index')">
                     {{ __('Pesan Pengguna') }}

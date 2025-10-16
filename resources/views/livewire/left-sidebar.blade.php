@@ -35,7 +35,7 @@
                 {{-- Materi --}}
                 <a href="{{ route('materi-siswa') }}"
                     class="hover:bg-blue-400 hover:text-white p-2 flex items-center gap-2 rounded-full"
-                    data-tooltip-target="materi-bottom" data-tooltip-placement="bottom">
+                    data-tooltip-target="materi-bottom" data-tooltip-placement="bottom" wire:navigate>
                     <i
                         class="fa-solid fa-book-open-reader flex items-center justify-center h-8 w-8 rounded-full text-white bg-blue-500"></i>
                     Materi
@@ -138,7 +138,7 @@
 
                 {{-- tambah materi --}}
                 <a href="{{ route('tambah-materi') }}" wire:navigate
-                    class="hover:bg-blue-400 p-2 flex hover:text-white flex-row gap-2 items-center rounded-full"
+                    class="{{ request()->routeIs('tambah-materi') ? ' bg-blue-400 p-2 flex text-white flex-row gap-2 items-center rounded-full' : 'hover:bg-blue-400 p-2 flex hover:text-white flex-row gap-2 items-center rounded-full' }}"
                     data-tooltip-target="materi-bottom" data-tooltip-placement="bottom" wire:navigate>
                     <i
                         class="fa-solid fa-book-open-reader p-2 rounded-full h-8 w-8 text-center text-white bg-blue-500"></i>

@@ -11,6 +11,8 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+    {{-- flowbite --}}
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -19,20 +21,21 @@
 <body class="font-sans text-gray-900 antialiased">
     <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100 dark:bg-gray-900">
         <div>
-            <a href="{{ url('/') }}">
+            <a href="/">
                 {{-- <x-application-logo class="w-20 h-20 fill-current text-gray-500" /> --}}
-                <a href="#home" class="flex items-center space-x-3 rtl:space-x-reverse">
-                    <span
-                        class="text-transparent bg-clip-text bg-gradient-to-r from-[#ff4800] via-[#e0007c] to-[#3b82f6] self-center text-6xl tracking-wide font-bold whitespace-nowrap ">RTS</span>
-                </a>
+                <span
+                    class="text-white text-center font-bold mt-3 {{ request()->routeIs('register') ? 'text-4xl' : 'text-6xl' }}">{{ request()->routeIs('register') ? 'Pendaftaran Magang / Studi Independen' : 'RTS' }}</span>
             </a>
         </div>
 
         <div
-            class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white dark:bg-gray-800 shadow-md overflow-hidden sm:rounded-lg">
+            class="w-full {{ request()->routeIs('register') ? 'sm:max-w-xl' : 'sm:max-w-md' }}  mt-6 px-6 py-4 bg-white dark:bg-gray-800 shadow-md overflow-hidden sm:rounded-lg">
             {{ $slot }}
         </div>
     </div>
+    {{-- script flowbite --}}
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+
 </body>
 
 </html>

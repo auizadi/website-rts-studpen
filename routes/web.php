@@ -44,6 +44,8 @@ Route::post('/kirim-pesan', [PesanController::class, 'store'])->name('kirimPesan
 
 Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::get('/instruktur/index', [InstrukturController::class, 'index'])->name('instruktur.index');
+    Route::get('/pendaftaran-mbkm', [InstrukturController::class, 'pendaftaran'])->name('pendaftaran');
+    Route::patch('/pendaftaran-mbkm/mahasiswa/{id}/update-status', [InstrukturController::class, 'updateStatus'])->name('updateStatus');
     Route::get('/pesan', [PesanController::class, 'index'])->name('pesan.index');
     Route::get('/instruktur/create', [InstrukturController::class, 'create'])->name('instruktur.create');
     Route::post('/instruktur', [InstrukturController::class, 'store'])->name('instruktur.store');

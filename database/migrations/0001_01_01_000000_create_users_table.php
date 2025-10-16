@@ -14,11 +14,19 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('nama_kampus')->nullable();
+            $table->string('program_studi')->nullable();
+            $table->enum('kategori_mbkm', ['XR', 'webdev'])->nullable();
+            // $table->string('role')->default('siswa');
+            $table->enum('status', ['pending', 'diterima', 'ditolak'])->default('pending');
             $table->string('email')->unique();
+            $table->string('cv')->nullable();
+            $table->string('surat_pengantar')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+            $table->softDeletes();
         });
 
         Schema::create('password_reset_tokens', function (Blueprint $table) {

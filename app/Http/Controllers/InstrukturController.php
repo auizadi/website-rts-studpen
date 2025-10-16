@@ -15,6 +15,24 @@ class InstrukturController extends Controller
     /**
      * Display a listing of the resource.
      */
+    public function pendaftaran()
+    {
+        $pendaftars = User::role('siswa')->get();
+        return view('admin.instruktur.pendaftaran', compact('pendaftars'));
+    }
+
+    public function updateStatus(Request $request, $id){
+        $request->validate([
+            'status' => 'required|in:pending,diterima,ditolak'
+        ]);
+
+        $user = User::findOrFail($id);
+        $user->status = $request->status;
+        $user->save();
+
+        return back()->with('success', 'Status mahasiswa berhasil diperbaharui.');
+
+    }
 
     public function index()
     {
@@ -94,5 +112,5 @@ class InstrukturController extends Controller
         }
     }
 
-    
+
 }
